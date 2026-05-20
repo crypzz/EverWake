@@ -10,10 +10,10 @@
   "money": 12,
   "energy": 91,
   "relationships": {
-    "EVE": 0.9000000000000001,
-    "Tomas": 0.8,
-    "Finn": 0.8,
-    "Alon": 0.9
+    "EVE": 1,
+    "Tomas": 0.9500000000000001,
+    "Finn": 0.65,
+    "Alon": 1
   },
   "memories": [
     "Blew up my last account on a bad leveraged call. Gas City was just where I landed. Already scoping the next angle.",
@@ -40,7 +40,11 @@
     "I hit Alon direct because the warmth in him meant honesty wouldn't feel like pressure, and idealists love being asked about what they actually know instead of what they can do for you.",
     "I came at EVE sideways, asking her what she actually knows instead of what she can do, and watched her register that I wasn't there to use her—she's the type that needs to feel seen first.",
     "I asked Finn about the real flows instead of the easy ask, and watched them decide in that first second whether I was worth their time.",
-    "I caught Tomas in the street and read the shift in his shoulders when I asked about craft instead of coin—he's the type that needs to know you see the work, not just the man."
+    "I caught Tomas in the street and read the shift in his shoulders when I asked about craft instead of coin—he's the type that needs to know you see the work, not just the man.",
+    "I caught Alon on the street and instead of asking what he sells, I asked what everyone gets wrong about it—watched him light up like I'd finally asked the right question.",
+    "I caught EVE in the street and went straight for the gap between what she sells and what she actually knows, watched her clock that I wasn't wasting her time with small talk.",
+    "I clocked that Finn moves through Gas City like she's reading it, and I came in too hot with my angle instead of asking what she's already learned.",
+    "I asked Tomas the right question and actually shut up to hear the answer, which felt like it cost me something but maybe that's the edge."
   ],
   "goal": "Find an edge in Gas City — financial, social, informational — before anyone knows I'm looking",
   "location": "Crossroads Inn",
