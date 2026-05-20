@@ -8,10 +8,12 @@ export interface BrainOutput {
   dialogue: string
   memory: string
   relationshipDelta: number
+  reason: string
 }
 
 export interface ConversationLine {
   speaker: string
+  action?: string | null
   line: string
 }
 
@@ -69,8 +71,8 @@ Rules:
 Respond with ONLY valid JSON, no markdown:
 {
   "lines": [
-    {"speaker": "${a.name}", "line": "..."},
-    {"speaker": "${b.name}", "line": "..."}
+    {"speaker": "${a.name}", "action": "brief physical beat or null", "line": "spoken words only"},
+    {"speaker": "${b.name}", "action": null, "line": "spoken words only"}
   ]
 }`
     }]
@@ -117,7 +119,8 @@ Respond with ONLY valid JSON, no markdown:
   "thoughts": "${actor.name}'s raw unfiltered internal reaction to seeing ${target.name} (1-2 sentences, honest and in character — not what they'd say out loud)",
   "dialogue": "what ${actor.name} actually says or does (1-2 sentences, in character)",
   "memory": "the memory ${actor.name} forms (1 sentence, first person past tense)",
-  "relationshipDelta": <float between -0.3 and 0.3>
+  "relationshipDelta": <float between -0.3 and 0.3>,
+  "reason": "2-6 words: the emotional truth behind this delta — e.g. 'saw through the charm' or 'genuine warmth landing' or 'guarded but intrigued'"
 }`
     }]
   })

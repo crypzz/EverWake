@@ -1,4 +1,34 @@
 {
-  "tick": 26,
-  "conversations": []
+  "tick": 27,
+  "conversations": [
+    {
+      "participants": [
+        "Tomas",
+        "Trencher"
+      ],
+      "location": "Blacksmith Forge",
+      "lines": [
+        {
+          "speaker": "Tomas",
+          "action": null,
+          "line": "That steel order came through clean. You were right about the buyer."
+        },
+        {
+          "speaker": "Trencher",
+          "action": null,
+          "line": "Told you. Listen, I know three more suppliers who'd kill for a reliable smith."
+        },
+        {
+          "speaker": "Tomas",
+          "action": null,
+          "line": "Not interested in your schemes, Trencher. Just steady work and fair coin."
+        },
+        {
+          "speaker": "Trencher",
+          "action": null,
+          "line": "Fair coin gets you expansion. My schemes get you rich. Think on it."
+        }
+      ]
+    }
+  ]
 }

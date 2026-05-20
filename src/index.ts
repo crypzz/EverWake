@@ -50,81 +50,104 @@ function gcMail(subject: string, body: string) {
   } catch { /* best-effort */ }
 }
 
-function printCitizen(c: Citizen) {
-  const rels = Object.entries(c.relationships)
-    .map(([k, v]) => {
-      const bar = '█'.repeat(Math.round((v + 1) / 2 * 8)) + '░'.repeat(8 - Math.round((v + 1) / 2 * 8))
-      const color = v > 0.3 ? chalk.green : v < -0.3 ? chalk.red : chalk.yellow
-      return `${chalk.dim(k)} ${color(bar)} ${v.toFixed(2)}`
-    })
-    .join('  ')
+// ─── CINEMATIC ENGINE ────────────────────────────────────────────────────────
 
-  console.log(chalk.bold.cyan(`  ${c.name}`) + chalk.dim(` — ${c.occupation} @ ${c.location}`))
-  console.log(`    ${chalk.dim('goal:')} ${c.goal}`)
-  console.log(`    ${chalk.dim('rels:')} ${rels}`)
-  console.log(`    ${chalk.dim('mem:')}  ${chalk.italic.dim(c.memories.slice(-1)[0] ?? '—')}`)
+const sleep = (ms: number) => new Promise(r => setTimeout(r, ms))
+
+async function p(line = '', delay = 40) {
+  console.log(line)
+  await sleep(delay)
 }
 
-// ─── HEADER ─────────────────────────────────────────────────────────────────
+const SEP = chalk.dim('─────────────────────────────────')
+
+function timeOfDay(): string {
+  const h = new Date().getHours()
+  if (h >= 6 && h < 12) return 'MORNING'
+  if (h >= 12 && h < 17) return 'AFTERNOON'
+  if (h >= 17 && h < 21) return 'EVENING'
+  return 'NIGHT'
+}
+
+function socialStanding(name: string, citizens: Citizen[]): number {
+  const scores: number[] = []
+  for (const c of citizens) {
+    if (c.name === name) continue
+    const key = Object.keys(c.relationships).find(k => k.toLowerCase() === name.toLowerCase())
+    if (key !== undefined && c.relationships[key] !== undefined) scores.push(c.relationships[key]!)
+  }
+  return scores.length ? scores.reduce((a, b) => a + b, 0) / scores.length : 0
+}
+
+function standingBar(score: number): string {
+  const filled = Math.round((score + 1) / 2 * 10)
+  const bar = '█'.repeat(Math.max(0, filled)) + '░'.repeat(Math.max(0, 10 - filled))
+  if (score > 0.5) return chalk.green(bar)
+  if (score < -0.2) return chalk.red(bar)
+  return chalk.yellow(bar)
+}
+
+function citizenStatus(c: Citizen, results: InteractResult[]): string {
+  const incoming = results.filter(r => r.target === c.name)
+  const avgDelta = incoming.length
+    ? incoming.reduce((s, r) => s + r.delta, 0) / incoming.length
+    : 0
+  const avg = Object.values(c.relationships).reduce((s, v) => s + v, 0) /
+    Math.max(1, Object.keys(c.relationships).length)
+
+  const map: Record<string, () => string> = {
+    EVE:      () => avgDelta > 0.03 ? "softening. won't admit it." : avg > 0.8 ? 'electric. watching everyone.' : 'volatile. pushing.',
+    Tomas:    () => avg > 0.85 ? 'steady. always steady.' : 'grinding toward more.',
+    Finn:     () => avgDelta > 0.03 ? 'something is cracking.' : avg > 0.85 ? 'guarded. but warming.' : 'cynical. not wrong though.',
+    Alon:     () => avg > 0.9 ? 'most trusted in Everwake.' : 'open. always open.',
+    Trencher: () => avg < 0.6 ? 'new. pushing too hard.' : avg > 0.85 ? 'gaining ground. fast.' : 'working every angle.',
+  }
+  return (map[c.name] ?? (() => avg > 0.5 ? 'steady.' : 'restless.'))()
+}
+
+function tickSummary(tick: number, results: InteractResult[]): string {
+  const significant = [...results]
+    .filter(r => Math.abs(r.delta) > 0.05)
+    .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))
+  const top = significant[0]
+
+  if (!top) return `Tick ${tick} — nothing moved. The town held its breath.`
+  if (top.delta >= 0.1) return `${top.actor} and ${top.target} got closer this tick. Something between them is shifting.`
+  if (top.delta <= -0.1) return `${top.actor} pulled back from ${top.target}. A distance is opening.`
+  if (significant.length >= 3) return `Tick ${tick} — small movements everywhere. The town is restless tonight.`
+  return `${top.actor} noticed ${top.target} differently this tick. It's not much, but it's something.`
+}
+
+// ─── LOAD ────────────────────────────────────────────────────────────────────
 
 const tick = loadTick() + 1
-const width = 60
-
-console.log('\n' + chalk.bold.yellow('╔' + '═'.repeat(width - 2) + '╗'))
-console.log(chalk.bold.yellow('║') + chalk.bold.white(` ⚡  EVERWAKE  ─  TICK ${tick}`.padEnd(width - 3)) + chalk.bold.yellow('║'))
-console.log(chalk.bold.yellow('║') + chalk.dim(` ${new Date().toLocaleTimeString()}  ·  ${new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}`.padEnd(width - 2)) + chalk.bold.yellow('║'))
-console.log(chalk.bold.yellow('╚' + '═'.repeat(width - 2) + '╝') + '\n')
-
-// ─── LOAD CITIZENS ──────────────────────────────────────────────────────────
-
 const citizens = readdirSync(citizensDir)
   .filter(f => f.endsWith('.json'))
   .map(f => loadCitizen(f))
 
-console.log(chalk.bold('PRE-TICK STATE'))
-console.log(chalk.dim('─'.repeat(width)))
-citizens.forEach(printCitizen)
+// ─── RUN INTERACTIONS (silent) ───────────────────────────────────────────────
 
-// ─── TICK ───────────────────────────────────────────────────────────────────
+const total = citizens.length * (citizens.length - 1)
+let done = 0
 
-console.log('\n' + chalk.bold('INTERACTIONS'))
-console.log(chalk.dim('─'.repeat(width)))
+process.stdout.write(chalk.dim(`  processing tick ${tick}...\r`))
 
 const results: InteractResult[] = []
-
 for (let i = 0; i < citizens.length; i++) {
   for (let j = 0; j < citizens.length; j++) {
     if (i !== j) {
       const result = await interact(citizens[i]!, citizens[j]!)
       results.push(result)
+      done++
+      process.stdout.write(chalk.dim(`  processing ${done}/${total} interactions...\r`))
     }
   }
 }
 
-// ─── RELATIONSHIP DELTA REPORT ───────────────────────────────────────────────
+process.stdout.write(' '.repeat(50) + '\r')
 
-console.log('\n' + chalk.bold('RELATIONSHIP SHIFTS THIS TICK'))
-console.log(chalk.dim('─'.repeat(width)))
+// ─── GENERATE CONVERSATIONS ──────────────────────────────────────────────────
 
-const bigMoves = results
-  .filter(r => Math.abs(r.delta) > 0.05)
-  .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))
-
-if (bigMoves.length === 0) {
-  console.log(chalk.dim('  No significant shifts.'))
-} else {
-  for (const r of bigMoves) {
-    const arrow = r.delta > 0 ? chalk.green(`▲ +${r.delta.toFixed(2)}`) : chalk.red(`▼ ${r.delta.toFixed(2)}`)
-    console.log(`  ${chalk.cyan(r.actor.padEnd(6))} → ${chalk.magenta(r.target.padEnd(6))}   ${r.before.toFixed(2)} → ${chalk.white(r.after.toFixed(2))}   ${arrow}`)
-  }
-}
-
-// ─── CONVERSATIONS ───────────────────────────────────────────────────────────
-
-console.log('\n' + chalk.bold('CONVERSATIONS THIS TICK'))
-console.log(chalk.dim('─'.repeat(width)))
-
-// Pick 1-2 pairs: biggest relationship movers first, prefer same location
 const seen = new Set<string>()
 const conversationPairs: Array<{ a: Citizen; b: Citizen; context: string }> = []
 
@@ -137,18 +160,15 @@ for (const r of rankedResults) {
   const pairKey = [r.actor, r.target].sort().join('|')
   if (seen.has(pairKey)) continue
   seen.add(pairKey)
-
   const a = citizens.find(c => c.name === r.actor)!
   const b = citizens.find(c => c.name === r.target)!
   const sameLocation = a.location === b.location
   const context = r.delta > 0
     ? `Their relationship just warmed (${r.before.toFixed(2)} → ${r.after.toFixed(2)})${sameLocation ? `, both at ${a.location}` : ''}.`
     : `Their relationship just cooled (${r.before.toFixed(2)} → ${r.after.toFixed(2)})${sameLocation ? `, both at ${a.location}` : ''}.`
-
   conversationPairs.push({ a, b, context })
 }
 
-// Fall back to same-location pairs if nothing moved
 if (conversationPairs.length === 0) {
   for (let i = 0; i < citizens.length && conversationPairs.length < 1; i++) {
     for (let j = i + 1; j < citizens.length; j++) {
@@ -168,90 +188,57 @@ if (conversationPairs.length === 0) {
 }
 
 const conversations: Conversation[] = []
-
 for (const { a, b, context } of conversationPairs) {
   try {
-    const convo = await generateConversation(a, b, context)
-    conversations.push(convo)
-
-    console.log(chalk.bold(`\n  ${chalk.cyan(a.name)} & ${chalk.magenta(b.name)}`) + chalk.dim(` — ${convo.location}`))
-    console.log(chalk.dim('  ' + '─'.repeat(50)))
-    for (const line of convo.lines) {
-      const nameColor = line.speaker === a.name ? chalk.cyan : chalk.magenta
-      console.log(`  ${nameColor(line.speaker.padEnd(10))} ${chalk.white(line.line)}`)
-    }
-  } catch {
-    // best-effort — don't break tick if conversation fails
-  }
+    conversations.push(await generateConversation(a, b, context))
+  } catch { /* best-effort */ }
 }
 
-// ─── ECONOMY ─────────────────────────────────────────────────────────────────
+// ─── ECONOMY (silent) ────────────────────────────────────────────────────────
 
-console.log('\n' + chalk.bold('ECONOMY'))
-console.log(chalk.dim('─'.repeat(width)))
-
-const balanceLogs = await updateCitizenBalances(citizens)
-if (balanceLogs.length > 0) {
-  balanceLogs.forEach(l => console.log(l))
-} else {
-  console.log(chalk.dim('  (set WAKE_TOKEN_MINT in .env to enable live $WAKE balance reads)'))
-}
+await updateCitizenBalances(citizens)
 
 const trencher = citizens.find(c => c.name === 'Trencher')
-const tradeLog: string[] = []
+let tradeNote = ''
 if (trencher) {
   const trade = await trencherTrade(trencher, citizens)
   if (trade.fired) {
-    const line = `  Trencher sent ${trade.amount} $WAKE → ${trade.to}  (${trade.reason})`
-    console.log(chalk.yellow(line))
-    tradeLog.push(line)
+    tradeNote = `Trencher moved ${trade.amount} $WAKE → ${trade.to}  (${trade.reason})`
     gcEmit('everwake.trade', `Trencher sent ${trade.amount} $WAKE to ${trade.to}`, {
       from: trade.from, to: trade.to, amount: trade.amount
     })
-  } else {
-    console.log(chalk.dim(`  Trencher held — ${trade.reason ?? 'no trade this tick'}`))
   }
 }
 
-// ─── SAVE STATE ─────────────────────────────────────────────────────────────
+// ─── SAVE STATE ──────────────────────────────────────────────────────────────
 
 citizens.forEach(saveCitizen)
-saveTick(tick)
+saveTick(tick, conversations)
 
-// ─── GC EVENT BUS ────────────────────────────────────────────────────────────
-
-console.log('\n' + chalk.bold('EMITTING TO GC BUS'))
-console.log(chalk.dim('─'.repeat(width)))
+// ─── GC EVENTS ───────────────────────────────────────────────────────────────
 
 const notableEvents: string[] = []
-
 for (const r of results) {
   if (r.delta <= -0.15) {
     const msg = `${r.actor} and ${r.target} had a hostile encounter (${r.before.toFixed(2)} → ${r.after.toFixed(2)})`
     gcEmit('everwake.conflict', msg, { actor: r.actor, target: r.target, before: r.before, after: r.after })
-    console.log(`  ${chalk.red('🔥')} event: ${chalk.dim('everwake.conflict')}  — ${msg}`)
     notableEvents.push(msg)
   } else if (r.delta >= 0.15) {
     const msg = `${r.actor} warmed to ${r.target} (${r.before.toFixed(2)} → ${r.after.toFixed(2)})`
     gcEmit('everwake.bond', msg, { actor: r.actor, target: r.target, before: r.before, after: r.after })
-    console.log(`  ${chalk.green('💚')} event: ${chalk.dim('everwake.bond')}     — ${msg}`)
     notableEvents.push(msg)
   }
 }
-
 gcEmit('everwake.tick', `Tick ${tick} complete — ${results.length} interactions`, {
-  tick,
-  interactions: results.length,
+  tick, interactions: results.length,
   conflicts: results.filter(r => r.delta <= -0.15).length,
-  bonds: results.filter(r => r.delta >= 0.15).length
+  bonds: results.filter(r => r.delta >= 0.15).length,
 })
-console.log(`  ${chalk.yellow('⚡')} event: ${chalk.dim('everwake.tick')}      — tick ${tick} complete, ${results.length} interactions processed`)
 
 // ─── MAYOR MAIL ──────────────────────────────────────────────────────────────
 
-const worstPair = results.sort((a, b) => a.after - b.after)[0]!
-const bestPair  = results.sort((a, b) => b.after - a.after)[0]!
-
+const worstPair = [...results].sort((a, b) => a.after - b.after)[0]!
+const bestPair  = [...results].sort((a, b) => b.after - a.after)[0]!
 const mailBody = [
   `EVERWAKE — TICK ${tick} REPORT`,
   `${results.length} interactions processed.`,
@@ -263,22 +250,87 @@ const mailBody = [
   `COLDEST PAIR: ${worstPair.actor} → ${worstPair.target} at ${worstPair.after.toFixed(2)}`,
   `WARMEST PAIR: ${bestPair.actor} → ${bestPair.target} at ${bestPair.after.toFixed(2)}`,
   '',
-  tradeLog.length > 0 ? `TRADES:\n${tradeLog.join('\n')}` : 'No trades this tick.',
+  tradeNote ? `TRADES:\n  ${tradeNote}` : 'No trades this tick.',
   '',
-  'State saved. Next tick in ~5m.',
+  'State saved.',
 ].join('\n')
-
 gcMail(`Tick ${tick} complete`, mailBody)
 
-console.log('\n' + chalk.bold('MAYOR\'S INBOX'))
-console.log(chalk.dim('─'.repeat(width)))
-console.log(chalk.dim('  from: everwake'))
-console.log(chalk.dim(`  subj: Tick ${tick} complete`))
-console.log(chalk.dim('  ─────────────────────────'))
-mailBody.split('\n').forEach(line => console.log(chalk.dim('  ') + (line.startsWith('EVERWAKE') || line.startsWith('NOTABLE') || line.startsWith('COLDEST') || line.startsWith('WARMEST') ? chalk.white(line) : chalk.dim(line))))
+// ─── CINEMATIC OUTPUT ─────────────────────────────────────────────────────────
 
-// ─── FOOTER ──────────────────────────────────────────────────────────────────
+const tod = timeOfDay()
 
-console.log('\n' + chalk.bold.yellow('╔' + '═'.repeat(width - 2) + '╗'))
-console.log(chalk.bold.yellow('║') + chalk.bold.white(` ✓  TICK ${tick} SAVED  ·  next tick in ~5m`.padEnd(width - 3)) + chalk.bold.yellow('║'))
-console.log(chalk.bold.yellow('╚' + '═'.repeat(width - 2) + '╝') + '\n')
+await p()
+await p(SEP, 20)
+await p(chalk.bold.white(`EVERWAKE — TICK ${tick}`), 60)
+await p(SEP, 20)
+
+// Conversations
+for (const convo of conversations) {
+  const loc = convo.location.toUpperCase()
+  await p()
+  await p(chalk.yellow(`📍 ${loc} — ${tod}`), 60)
+  await p()
+
+  const [nameA, nameB] = convo.participants
+  for (const line of convo.lines) {
+    const isA = line.speaker === nameA
+    const nameColor = isA ? chalk.cyan : chalk.magenta
+    await p(`  ${nameColor(chalk.bold(line.speaker.toUpperCase()))}`, 80)
+    if (line.action) {
+      await p(`  ${chalk.dim.italic(`(${line.action})`)}`, 30)
+    }
+    await p(`  ${chalk.white(`"${line.line}"`)}`, 60)
+    await p()
+  }
+}
+
+// Relationship shifts
+const shifts = results
+  .filter(r => Math.abs(r.delta) > 0.02)
+  .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))
+
+if (shifts.length > 0) {
+  await p(SEP, 20)
+  await p(chalk.bold.white('RELATIONSHIP SHIFTS'), 60)
+  await p(SEP, 20)
+  await p()
+
+  for (const r of shifts) {
+    const sign = r.delta >= 0 ? '+' : ''
+    const arrow = r.delta > 0 ? chalk.green('↑') : chalk.red('↓')
+    const deltaStr = r.delta > 0
+      ? chalk.green(`${sign}${r.delta.toFixed(2)}`)
+      : chalk.red(`${sign}${r.delta.toFixed(2)}`)
+    const actor  = chalk.cyan(r.actor.padEnd(8))
+    const target = chalk.magenta(r.target.padEnd(8))
+    await p(`  ${actor} → ${target}  ${deltaStr}  ${arrow}  ${chalk.dim(`(${r.reason})`)}`, 35)
+  }
+}
+
+// Town state
+await p()
+await p(SEP, 20)
+await p(chalk.bold.white(`TOWN STATE — TICK ${tick}`), 60)
+await p(SEP, 20)
+await p()
+
+for (const c of citizens) {
+  const score  = socialStanding(c.name, citizens)
+  const bar    = standingBar(score)
+  const name   = c.name.toUpperCase().padEnd(8)
+  const status = chalk.dim(citizenStatus(c, results))
+  await p(`  ${chalk.bold(name)}  ${bar}  ${status}`, 45)
+}
+
+if (tradeNote) {
+  await p()
+  await p(`  ${chalk.yellow('⚡')} ${chalk.dim(tradeNote)}`, 40)
+}
+
+// Summary
+await p()
+await p(SEP, 20)
+await p(chalk.italic.white(`  ${tickSummary(tick, results)}`), 100)
+await p(SEP, 20)
+await p()
