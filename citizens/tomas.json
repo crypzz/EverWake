@@ -13,7 +13,7 @@
     "EVE": 1,
     "Alon": 1,
     "Finn": 1,
-    "Trencher": 0.16
+    "Trencher": 0.24
   },
   "memories": [
     "Mira overcharged me for bread last week.",
@@ -88,7 +88,11 @@
     "I ran into Alon and found his idealistic warmth a respite from the constant grind—two stubborn souls, but his stubbornness comes from principle rather than appetite.",
     "I ran into EVE and found myself almost amused by her relentless energy—her toxicity stings, but her hunger for more reminds me why I swing this hammer.",
     "I ran into Finn and found his cynical edge less like a weapon and more like honest steel—no polish, no performance, just truth.",
-    "I ran into Trencher and felt that familiar weariness settle in—he means no real harm, but his endless hunger for the next thing wears on a man who just wants to build something solid."
+    "I ran into Trencher and felt that familiar weariness settle in—he means no real harm, but his endless hunger for the next thing wears on a man who just wants to build something solid.",
+    "I ran into Alon and felt something settle in my chest—a recognition that maybe there's value in building something that matters beyond the forge.",
+    "I ran into Eve and her toxic ambition grated against me, but I couldn't help noticing there's a kind of stubborn drive in her that mirrors my own—just pointed at all the wrong things.",
+    "I ran into Finn and recognized in their cynical stubborness a kind of clarity—someone who refuses to chase false things, even if it makes them lonely.",
+    "I saw Trencher again and felt the old irritation rise, but underneath it, a grudging respect for someone too stubborn to pretend at anything but what he wants."
   ],
   "goal": "Earn enough money to expand the forge",
   "location": "Blacksmith Forge"

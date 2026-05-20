@@ -10,10 +10,10 @@
   "money": 12,
   "energy": 91,
   "relationships": {
-    "EVE": 0.6000000000000001,
-    "Tomas": 0.5,
-    "Finn": 0.5,
-    "Alon": 0.6
+    "EVE": 0.7500000000000001,
+    "Tomas": 0.65,
+    "Finn": 0.65,
+    "Alon": 0.75
   },
   "memories": [
     "Blew up my last account on a bad leveraged call. Gas City was just where I landed. Already scoping the next angle.",
@@ -32,7 +32,11 @@
     "I read Alon fast and came in asking like they were already the expert, same move that worked on Finn—but with Alon I meant it, because they actually are.",
     "I read EVE as someone whose toxicity is just impatience with people slower than them, and I came in assuming they were already the expert—bet my genuine directness would beat their cynicism.",
     "I came back at Finn direct because cynics respect you more when you stop performing, and I meant every word about needing them.",
-    "I clocked Tomas as someone who'd respect getting cut straight to business, came in assuming he already knew I was serious because blacksmiths don't have time for bullshit."
+    "I clocked Tomas as someone who'd respect getting cut straight to business, came in assuming he already knew I was serious because blacksmiths don't have time for bullshit.",
+    "I clocked Alon as a true believer the second I saw them, and instead of playing it cool I came in direct about what I needed—felt right, felt honest.",
+    "I clocked EVE as someone with real ambition running hot, didn't play it cool, just came straight at them with a question that would either land or crash—but either way I'd know what I was dealing with.",
+    "I caught Finn and felt the cynicism before I even opened my mouth, which means I came in hot with respect instead of pressure, treated them like they had something I needed rather than like they owed me.",
+    "I came at Tomas straight but smart, led with respect for the craft instead of what I wanted, watched him register that I wasn't wasting his time."
   ],
   "goal": "Find an edge in Gas City — financial, social, informational — before anyone knows I'm looking",
   "location": "Crossroads Inn"
