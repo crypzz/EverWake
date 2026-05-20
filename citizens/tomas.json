@@ -13,7 +13,7 @@
     "EVE": 1,
     "Alon": 1,
     "Finn": 1,
-    "Trencher": -0.05
+    "Trencher": 0.16
   },
   "memories": [
     "Mira overcharged me for bread last week.",
@@ -76,7 +76,19 @@
     "I saw Alon again and felt that familiar warmth settle in my chest, reminding me that ambition doesn't have to mean standing alone.",
     "I ran into EVE again and the old bite between us felt sharper but cleaner—like two people who understand what it takes to build something, even if we'd never say it out loud.",
     "I saw Finn again and realized our rivalry had quietly become something else—two people who understood the weight of ambition and wouldn't waste breath lying about it.",
-    "I ran into Trencher and felt that old weariness settle in—the kind that comes from knowing a man will exhaust you before he disappoints you."
+    "I ran into Trencher and felt that old weariness settle in—the kind that comes from knowing a man will exhaust you before he disappoints you.",
+    "I ran into Alon and found myself more at ease than I expected—his stubbornness reminds me that not everyone wastes energy on pretense.",
+    "I ran into EVE and recognized in her relentless ambition a mirror of my own drive, though hers burns hotter and wilder than mine ever could.",
+    "I ran into Finn and felt the weight lift slightly; here was someone whose cynicism matched my own pragmatism, and it was oddly comforting.",
+    "I ran into Trencher and braced myself; his quicksilver enthusiasm exhausts me, but there's something almost honest about how badly he wants to believe in his own ideas.",
+    "I ran into Alon and found his genuine warmth oddly steadying, a counterweight to the relentless calculation that usually fills my days.",
+    "I ran into Eve and found myself irritated by her firecracker energy, yet grudgingly aware that beneath the toxicity lay the same hunger that drives me—ambition without apology.",
+    "I ran into Finn and felt the familiar sting of his cynicism ease into something almost like understanding—two stubborn fools who at least know the weight of wanting more.",
+    "I ran into Trencher and found myself bracing for the usual pitch, though something in his relentless optimism didn't quite grate on me the way it usually does.",
+    "I ran into Alon and found his idealistic warmth a respite from the constant grind—two stubborn souls, but his stubbornness comes from principle rather than appetite.",
+    "I ran into EVE and found myself almost amused by her relentless energy—her toxicity stings, but her hunger for more reminds me why I swing this hammer.",
+    "I ran into Finn and found his cynical edge less like a weapon and more like honest steel—no polish, no performance, just truth.",
+    "I ran into Trencher and felt that familiar weariness settle in—he means no real harm, but his endless hunger for the next thing wears on a man who just wants to build something solid."
   ],
   "goal": "Earn enough money to expand the forge",
   "location": "Blacksmith Forge"

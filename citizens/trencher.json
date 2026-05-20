@@ -10,17 +10,29 @@
   "money": 12,
   "energy": 91,
   "relationships": {
-    "EVE": 0.15,
-    "Tomas": 0.05,
-    "Finn": 0.08,
-    "Alon": 0.15
+    "EVE": 0.6000000000000001,
+    "Tomas": 0.5,
+    "Finn": 0.5,
+    "Alon": 0.6
   },
   "memories": [
     "Blew up my last account on a bad leveraged call. Gas City was just where I landed. Already scoping the next angle.",
     "Met a wandering herbalist who seemed genuinely warm when I threw interest at them, probably naive enough to share useful intel if I play it right.",
     "Met EVE, a toxic firecracker type with ambition; immediately tried to pump them for intel by flattering their status.",
     "I ran into Finn again and came in hot with flattery masked as authenticity, betting they'd soften up if I played the reformed angle hard enough.",
-    "I clocked Tomas as a proud craftsman type with access to supply lines; immediately started fishing for his vulnerabilities by stroking his ego and probing his business."
+    "I clocked Tomas as a proud craftsman type with access to supply lines; immediately started fishing for his vulnerabilities by stroking his ego and probing his business.",
+    "I spotted Alon and immediately clocked them as idealist with supply connections; hit them with the authenticity angle because that's what their type eats up.",
+    "I ran into EVE and immediately tried the enthusiasm angle, betting her ambition would make her brag about what she knows before she realized I was hunting for angles.",
+    "I read Finn as sharp and cynical fast, came at them with deference instead of ego-stroking, betting they'd respect the directness more than they'd respect a pitch.",
+    "I read Tomas as someone who'd rather be respected for his craft than flattered, clocked the hostility, decided to come at him straight and genuine because his type despises bullshit.",
+    "I clocked Alon as someone who'd respond to genuine respect for their expertise rather than flattery, came in straightforward about what they actually know, betting their warmth would override their stubbornness if I hit the right lever.",
+    "I clocked EVE as a firecracker with something to prove, came in asking what they know instead of pitching, betting their need to be seen as plugged-in would make them drop intel faster than they'd think twice about it.",
+    "I clocked Finn as someone who'd respect a question that assumes they know something worth knowing, betting their cynicism would crack faster if I didn't perform respect but just... asked like they'd already won.",
+    "I came back at Tomas straight, no angle visible, betting his pride in workmanship would matter more than whatever I botched last time.",
+    "I read Alon fast and came in asking like they were already the expert, same move that worked on Finn—but with Alon I meant it, because they actually are.",
+    "I read EVE as someone whose toxicity is just impatience with people slower than them, and I came in assuming they were already the expert—bet my genuine directness would beat their cynicism.",
+    "I came back at Finn direct because cynics respect you more when you stop performing, and I meant every word about needing them.",
+    "I clocked Tomas as someone who'd respect getting cut straight to business, came in assuming he already knew I was serious because blacksmiths don't have time for bullshit."
   ],
   "goal": "Find an edge in Gas City — financial, social, informational — before anyone knows I'm looking",
   "location": "Crossroads Inn"
