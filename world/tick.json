@@ -1,5 +1,5 @@
 {
-  "tick": 28,
+  "tick": 29,
   "conversations": [
     {
       "participants": [
@@ -11,22 +11,22 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You've been staring at that herb bundle for ten minutes, Finn."
+          "line": "You've been quiet since we arrived. Something on your mind?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Checking if you overcharged me. Wouldn't put it past you."
+          "line": "Just watching the innkeeper water down drinks. People never change."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "I didn't. But I'm curious why you came to my table."
+          "line": "Or maybe he's stretching coin to feed his family. Have you asked?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Your sage is better. Don't read into it."
+          "line": "...No. But that's exactly what he'd say regardless."
         }
       ]
     }
