@@ -1,32 +1,32 @@
 {
-  "tick": 27,
+  "tick": 28,
   "conversations": [
     {
       "participants": [
-        "Tomas",
-        "Trencher"
+        "Alon",
+        "Finn"
       ],
-      "location": "Blacksmith Forge",
+      "location": "Crossroads Inn",
       "lines": [
         {
-          "speaker": "Tomas",
+          "speaker": "Alon",
           "action": null,
-          "line": "That steel order came through clean. You were right about the buyer."
+          "line": "You gathered those feverfew stems yourself? That's genuine care."
         },
         {
-          "speaker": "Trencher",
+          "speaker": "Finn",
           "action": null,
-          "line": "Told you. Listen, I know three more suppliers who'd kill for a reliable smith."
+          "line": "Care? I gathered them because they sell. Don't romanticize practicality."
         },
         {
-          "speaker": "Tomas",
+          "speaker": "Alon",
           "action": null,
-          "line": "Not interested in your schemes, Trencher. Just steady work and fair coin."
+          "line": "Maybe. But you gathered extra for the inn's cook, didn't you?"
         },
         {
-          "speaker": "Trencher",
+          "speaker": "Finn",
           "action": null,
-          "line": "Fair coin gets you expansion. My schemes get you rich. Think on it."
+          "line": "She... needed them. That's all. Don't make it into something."
         }
       ]
     }
