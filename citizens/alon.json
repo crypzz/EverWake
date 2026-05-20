@@ -12,7 +12,7 @@
     "Finn": 1,
     "EVE": 1,
     "Tomas": 1,
-    "Trencher": 0.75
+    "Trencher": 0.9
   },
   "memories": [
     "Finn said the world is broken beyond fixing. He's wrong.",
@@ -91,8 +91,13 @@
     "I saw EVE again and caught a glimpse beneath their toxic ambition and relentless pitching—a person whose firecracker intensity burns because they're desperately trying to prove their instincts matter.",
     "I saw Finn again and recognized beneath their cynical edge and sharp observations that same fundamental hunger for meaning—a person whose skepticism burns because they're desperately afraid of being disappointed by a world they secretly wish was as good as I believe it to be.",
     "I saw Tomas again and recognized beneath their proud bearing and stubborn independence that same fundamental hunger for meaning—a person whose relentless work burns because they're desperately trying to prove their labor and instincts matter.",
-    "I saw Trencher again and recognized beneath their relentless overselling and short-burst charm that same fundamental hunger for meaning—a person whose exhausting restlessness burns because they're desperately trying to prove they're worth believing in."
+    "I saw Trencher again and recognized beneath their relentless overselling and short-burst charm that same fundamental hunger for meaning—a person whose exhausting restlessness burns because they're desperately trying to prove they're worth believing in.",
+    "I saw Eve again and recognized beneath their relentless overselling and frantic intensity that same fundamental hunger for meaning—a person whose exhausting ambition burns because they're desperately trying to prove they're worth believing in.",
+    "I saw Finn again and recognized beneath their sharp cynicism and stubborn edge that same fundamental hunger for meaning—a person whose cutting words burn because they're desperately trying to protect themselves from hope.",
+    "I saw Tomas again and recognized beneath their fierce pride and stubborn determination that same fundamental hunger for meaning—a person whose relentless work burns because they're desperately trying to prove they're worth believing in.",
+    "I saw Trencher again and recognized beneath their endless enthusiasm and hasty convictions that same fundamental hunger for meaning—a person whose breathless certainty burns because they're desperately trying to convince themselves and everyone else that their vision matters."
   ],
   "goal": "Prove that people are fundamentally good",
-  "location": "Crossroads Inn"
+  "location": "Crossroads Inn",
+  "wakeBalance": 0
 }

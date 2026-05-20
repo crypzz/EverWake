@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'
 import chalk from 'chalk'
 import { interact, type InteractResult } from './interact.ts'
+import { updateCitizenBalances, trencherTrade } from './economy.ts'
 import type { Citizen } from './types.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -117,6 +118,34 @@ if (bigMoves.length === 0) {
   }
 }
 
+// ─── ECONOMY ─────────────────────────────────────────────────────────────────
+
+console.log('\n' + chalk.bold('ECONOMY'))
+console.log(chalk.dim('─'.repeat(width)))
+
+const balanceLogs = await updateCitizenBalances(citizens)
+if (balanceLogs.length > 0) {
+  balanceLogs.forEach(l => console.log(l))
+} else {
+  console.log(chalk.dim('  (set WAKE_TOKEN_MINT in .env to enable live $WAKE balance reads)'))
+}
+
+const trencher = citizens.find(c => c.name === 'Trencher')
+const tradeLog: string[] = []
+if (trencher) {
+  const trade = await trencherTrade(trencher, citizens)
+  if (trade.fired) {
+    const line = `  Trencher sent ${trade.amount} $WAKE → ${trade.to}  (${trade.reason})`
+    console.log(chalk.yellow(line))
+    tradeLog.push(line)
+    gcEmit('everwake.trade', `Trencher sent ${trade.amount} $WAKE to ${trade.to}`, {
+      from: trade.from, to: trade.to, amount: trade.amount
+    })
+  } else {
+    console.log(chalk.dim(`  Trencher held — ${trade.reason ?? 'no trade this tick'}`))
+  }
+}
+
 // ─── SAVE STATE ─────────────────────────────────────────────────────────────
 
 citizens.forEach(saveCitizen)
@@ -166,6 +195,8 @@ const mailBody = [
   '',
   `COLDEST PAIR: ${worstPair.actor} → ${worstPair.target} at ${worstPair.after.toFixed(2)}`,
   `WARMEST PAIR: ${bestPair.actor} → ${bestPair.target} at ${bestPair.after.toFixed(2)}`,
+  '',
+  tradeLog.length > 0 ? `TRADES:\n${tradeLog.join('\n')}` : 'No trades this tick.',
   '',
   'State saved. Next tick in ~5m.',
 ].join('\n')

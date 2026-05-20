@@ -13,7 +13,7 @@
     "TOMAS": 1,
     "Alon": 1,
     "Finn": 1,
-    "Trencher": 0.59
+    "Trencher": 0.74
   },
   "memories": [
     "Tomas insulted my bread yesterday.",
@@ -91,8 +91,13 @@
     "I ran into Alon and realized his warmth doesn't come from delusion like I thought—it comes from the same unshakeable conviction everyone else has, except he somehow makes it feel less lonely.",
     "I saw Finn again and realized his cynicism isn't weakness—it's the same unshakeable conviction as everyone else, just pointed at different things.",
     "I ran into Tomas and caught myself noticing that his stubbornness might actually be the same unshakeable conviction everyone else has, except he backs it up with actual work.",
-    "I ran into Trencher and realized his wild conviction, even when it crashes and burns, isn't that different from everyone else's—he's just too impatient to let doubt settle in."
+    "I ran into Trencher and realized his wild conviction, even when it crashes and burns, isn't that different from everyone else's—he's just too impatient to let doubt settle in.",
+    "I ran into Alon and realized his idealism isn't naive—it's the same unshakeable conviction as everyone else, except he actually lets it make him warm instead of burning it into something else.",
+    "I ran into Finn and realized his cynicism isn't weakness—it's the same unshakeable conviction as everyone else, except he uses it to cut through the bullshit instead of hide behind it.",
+    "I ran into Tomas and realized his stubborn pride isn't ego—it's the same unshakeable conviction as everyone else, except he pours it into something real with his own two hands.",
+    "I realized Trencher's recklessness isn't weakness—it's the same unshakeable conviction as everyone else, except he sets the whole thing on fire and somehow stays warm in the flames."
   ],
   "goal": "DOESNT HAVE A SET GOAL",
-  "location": "EVERYWHERE"
+  "location": "EVERYWHERE",
+  "wakeBalance": 0
 }

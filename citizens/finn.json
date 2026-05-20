@@ -12,7 +12,7 @@
     "Alon": 1,
     "EVE": 1,
     "Tomas": 1,
-    "Trencher": 0.58
+    "Trencher": 0.6599999999999999
   },
   "memories": [
     "Alon gave away our last coin to a beggar. Predictable idealist.",
@@ -91,8 +91,13 @@
     "I met another herbalist named Alon and found myself cautiously curious rather than immediately dismissive, which was irritating in its own way.",
     "I ran into EVE and found myself almost amused by their unvarnished ambition—at least they had the decency not to pretend their hustle was about anything but themselves.",
     "I ran into Tomas again and noticed his stubborn pride didn't irritate me quite as much as it should have—a weakness I'll need to correct.",
-    "I ran into Trencher again and caught myself almost looking forward to his transparent scheming—which meant I need to watch myself more carefully around him."
+    "I ran into Trencher again and caught myself almost looking forward to his transparent scheming—which meant I need to watch myself more carefully around him.",
+    "I ran into Alon and found their earnest idealism irritating in a way that was almost... not entirely disagreeable, which bothered me more than it should have.",
+    "I ran into EVE and found her relentless self-interest almost refreshing compared to the others—a reminder that at least some people don't bother pretending to be anything but what they are.",
+    "I saw Tomas again and found his straightforward stubbornness almost... bearable, which meant I probably wasn't thinking clearly.",
+    "I ran into Trencher and found his obvious grift almost preferable to the veiled agendas of others, which was a worrying thought I immediately regretted."
   ],
   "goal": "Prove that people only ever help themselves",
-  "location": "Crossroads Inn"
+  "location": "Crossroads Inn",
+  "wakeBalance": 0
 }

@@ -9,4 +9,5 @@ export interface Citizen {
   memories: string[]
   goal: string
   location: string
+  wakeBalance?: number
 }

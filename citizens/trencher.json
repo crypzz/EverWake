@@ -10,10 +10,10 @@
   "money": 12,
   "energy": 91,
   "relationships": {
-    "EVE": 0.7500000000000001,
-    "Tomas": 0.65,
-    "Finn": 0.65,
-    "Alon": 0.75
+    "EVE": 0.9000000000000001,
+    "Tomas": 0.8,
+    "Finn": 0.8,
+    "Alon": 0.9
   },
   "memories": [
     "Blew up my last account on a bad leveraged call. Gas City was just where I landed. Already scoping the next angle.",
@@ -36,8 +36,13 @@
     "I clocked Alon as a true believer the second I saw them, and instead of playing it cool I came in direct about what I needed—felt right, felt honest.",
     "I clocked EVE as someone with real ambition running hot, didn't play it cool, just came straight at them with a question that would either land or crash—but either way I'd know what I was dealing with.",
     "I caught Finn and felt the cynicism before I even opened my mouth, which means I came in hot with respect instead of pressure, treated them like they had something I needed rather than like they owed me.",
-    "I came at Tomas straight but smart, led with respect for the craft instead of what I wanted, watched him register that I wasn't wasting his time."
+    "I came at Tomas straight but smart, led with respect for the craft instead of what I wanted, watched him register that I wasn't wasting his time.",
+    "I hit Alon direct because the warmth in him meant honesty wouldn't feel like pressure, and idealists love being asked about what they actually know instead of what they can do for you.",
+    "I came at EVE sideways, asking her what she actually knows instead of what she can do, and watched her register that I wasn't there to use her—she's the type that needs to feel seen first.",
+    "I asked Finn about the real flows instead of the easy ask, and watched them decide in that first second whether I was worth their time.",
+    "I caught Tomas in the street and read the shift in his shoulders when I asked about craft instead of coin—he's the type that needs to know you see the work, not just the man."
   ],
   "goal": "Find an edge in Gas City — financial, social, informational — before anyone knows I'm looking",
-  "location": "Crossroads Inn"
+  "location": "Crossroads Inn",
+  "wakeBalance": 0
 }

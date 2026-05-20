@@ -1,0 +1,11 @@
+# Citizen wallet addresses for the Everwake simulation
+# Public keys only — signing requires private keys held separately
+wallets:
+  Alon:    "11111111111111111111111111111111"
+  EVE:     "11111111111111111111111111111111"
+  Finn:    "11111111111111111111111111111111"
+  Tomas:   "11111111111111111111111111111111"
+  Trencher: "11111111111111111111111111111111"
+
+# $WAKE token mint address (set WAKE_TOKEN_MINT in .env to enable live balance reads)
+wake_mint: ""
