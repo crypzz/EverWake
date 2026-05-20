@@ -1,0 +1,48 @@
+import Anthropic from '@anthropic-ai/sdk'
+import type { Citizen } from './types.ts'
+
+const client = new Anthropic()
+
+export interface BrainOutput {
+  thoughts: string
+  dialogue: string
+  memory: string
+  relationshipDelta: number
+}
+
+export async function think(actor: Citizen, target: Citizen): Promise<BrainOutput> {
+  const key = Object.keys(actor.relationships).find(
+    k => k.toLowerCase() === target.name.toLowerCase()
+  )
+  const score = key !== undefined ? (actor.relationships[key] ?? 0) : 0
+
+  const message = await client.messages.create({
+    model: 'claude-haiku-4-5',
+    max_tokens: 400,
+    messages: [{
+      role: 'user',
+      content: `You are roleplaying as ${actor.name}, a ${actor.occupation}.
+Traits: ${actor.traits.join(', ')}
+Goal: ${actor.goal}
+Recent memories: ${actor.memories.slice(-3).join(' | ')}
+Current feeling toward ${target.name}: ${score.toFixed(2)} (−1 hostile → +1 warm)
+
+${target.name} is a ${target.occupation} with traits: ${target.traits.join(', ')}.
+You just ran into ${target.name}. React as ${actor.name} would.
+
+Respond with ONLY valid JSON, no markdown:
+{
+  "thoughts": "${actor.name}'s raw unfiltered internal reaction to seeing ${target.name} (1-2 sentences, honest and in character — not what they'd say out loud)",
+  "dialogue": "what ${actor.name} actually says or does (1-2 sentences, in character)",
+  "memory": "the memory ${actor.name} forms (1 sentence, first person past tense)",
+  "relationshipDelta": <float between -0.3 and 0.3>
+}`
+    }]
+  })
+
+  const block = message.content.find(b => b.type === 'text')
+  if (!block || block.type !== 'text') throw new Error('No text in brain response')
+
+  const raw = block.text.trim().replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '')
+  return JSON.parse(raw) as BrainOutput
+}

@@ -1,0 +1,5 @@
+[order]
+description = "Run one simulation tick — all citizens interact, state saved, mayor notified"
+exec = "/Users/kpkp/everwake/assets/scripts/everwake-tick.sh"
+trigger = "cooldown"
+interval = "5m"
