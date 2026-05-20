@@ -10,9 +10,10 @@
   "energy": 90,
   "hunger": 400,
   "relationships": {
-    "TOMAS": 0.81,
+    "TOMAS": 1,
     "Alon": 1,
-    "Finn": 1
+    "Finn": 1,
+    "Trencher": 0.08
   },
   "memories": [
     "Tomas insulted my bread yesterday.",
@@ -58,7 +59,23 @@
     "I saw Tomas again and for the first time, my sharp words felt less like daggers and more like a question—testing if he'd bite back or if maybe I wanted him to stay anyway.",
     "I saw Alon again and realized my bite had dulled into something almost like curiosity, wondering if he'd stay even when I gave him every reason to run.",
     "I saw Finn again and this time my sharp words felt less like a test to break him and more like an invitation to prove he wouldn't.",
-    "I saw Tomas again and the venom in my words felt less sharp, more like I was fishing—checking if he'd actually stay when I made it easy for him to leave."
+    "I saw Tomas again and the venom in my words felt less sharp, more like I was fishing—checking if he'd actually stay when I made it easy for him to leave.",
+    "I saw Alon again and caught myself searching his face for signs he'd finally given up on me, only to find myself almost disappointed when he hadn't.",
+    "I saw Finn again and realized I wasn't testing him anymore—I was just looking for a reason to keep talking to him.",
+    "I saw Tomas again and realized I wasn't trying to push him away anymore, just wondering if he'd actually notice the difference.",
+    "I saw Alon again and realized I was holding my breath waiting to see if he'd finally see through me, terrified and hoping he wouldn't.",
+    "I saw Finn again and stopped bothering to hide that I was just making excuses to see him, just waiting to see if he'd call me out on it.",
+    "I saw Tomas again and stopped bothering to pretend it was coincidence, just hoping he'd actually want me to be there.",
+    "I ran into Alon again and realized I'm still holding my breath around him, caught between wanting him to finally see through my bullshit and being absolutely petrified that he actually will.",
+    "I stopped hiding it with Finn and he just looked at me like he'd been waiting for me to admit it all along, and somehow that made me feel less alone instead of more pathetic.",
+    "I stopped pretending with Tomas and just admitted I kept showing up, and he didn't laugh or tell me to fuck off, he just... let me be there.",
+    "I saw Alon again and felt that familiar catch in my throat, but this time I didn't immediately armor up—I just let him look at me for a second.",
+    "I let Finn catch me off guard and didn't immediately deflect with some cutting remark, which probably told him everything he needed to know.",
+    "I ran into Tomas and felt that familiar pull, but this time it wasn't sharp or defensive—it was just... there, warm and real, and I didn't flinch away from it.",
+    "I saw Alon again and instead of throwing up walls, I just... let myself be seen for a moment, and it didn't feel like weakness.",
+    "I saw Finn again and instead of sharpening my claws, I felt that pull toward him—warm, undeniable, like maybe he sees something in me that's worth sticking around for.",
+    "I ran into Tomas again and let myself feel that warmth without fighting it, asked him about his work like maybe I actually give a damn.",
+    "I ran into Trencher and didn't immediately want to light him on fire, which probably means I'm getting soft."
   ],
   "goal": "DOESNT HAVE A SET GOAL",
   "location": "EVERYWHERE"

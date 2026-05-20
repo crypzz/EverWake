@@ -11,7 +11,8 @@
   "relationships": {
     "Finn": 1,
     "EVE": 1,
-    "Tomas": 1
+    "Tomas": 1,
+    "Trencher": 0.15
   },
   "memories": [
     "Finn said the world is broken beyond fixing. He's wrong.",
@@ -58,7 +59,23 @@
     "I saw Tomas again and this time I didn't second-guess the warmth blooming between us; I let myself trust that two stubborn hearts could find something real in honest conversation.",
     "I saw Eve again and instead of dismissing her fire as mere toxicity, I recognized it as passion—misguided maybe, but real—and I wanted to understand it.",
     "I saw Finn again on the road and realized I'd stopped needing them to believe what I believe; I just wanted to understand the wisdom their cynicism had earned them.",
-    "I saw Tomas on the road and felt the quiet certainty that two stubborn people could choose to understand each other, over and over, and build something honest from it."
+    "I saw Tomas on the road and felt the quiet certainty that two stubborn people could choose to understand each other, over and over, and build something honest from it.",
+    "I saw Eve's intensity not as something to fear or dismiss, but as a kind of passion that deserved understanding, and I chose to meet her with genuine curiosity instead of judgment.",
+    "I saw Finn again and felt no need to convince them of anything; I simply wanted to understand the hard-won knowledge their cynicism protected.",
+    "I met Tomas again and recognized that his pride and stubbornness weren't walls meant to keep me out, but the careful architecture of someone who builds things that last.",
+    "I noticed how Eve's ambition burned so bright, and instead of being put off by her intensity, I felt curious about what wounds or dreams fueled such fierce momentum.",
+    "I saw Finn and felt no need to convince them of anything; I simply wanted to understand the hard-won knowledge their cynicism protected.",
+    "I saw Tomas again and felt the quiet satisfaction of recognizing someone not by their walls, but by the earnest strength beneath them.",
+    "I met Eve again and found myself genuinely curious about the passion beneath her sharp edges, seeing not the toxicity but the wounded dream pushing her forward.",
+    "I saw Finn again and recognized how their cynicism wasn't emptiness but armor forged from hard-won understanding, and I wanted to know what lay beneath it.",
+    "I saw Tomas again and felt the quiet satisfaction of recognizing someone not by their walls, but by the earnest strength beneath them.",
+    "I saw Eve again and felt drawn to understand the fierce determination beneath her toxic edges, sensing that her sharpness wasn't cruelty but survival.",
+    "I saw Finn again and felt the familiar pull to understand what shaped their cynicism, knowing that beneath their armor lay something worth discovering.",
+    "I saw Tomas at the crossroads and recognized in his weathered hands not just a craftsman's pride, but a man learning that strength and openness can coexist.",
+    "I saw Eve again and felt drawn to understand the fierce determination beneath her toxic edges, sensing that her sharpness wasn't cruelty but survival.",
+    "I saw Finn again at the crossroads and felt the stubborn certainty crystallize in me that their cynicism was born from hope wounded, not from truth.",
+    "I watched Tomas's weathered hands relax slightly when I offered the herbs, and in that small softening I glimpsed how even the proudest hearts hunger to be seen without judgment.",
+    "I met Trencher at the crossroads and chose to see past the relentless sales talk to the scared person underneath, determined to show them that at least one person wouldn't exploit their own brokenness."
   ],
   "goal": "Prove that people are fundamentally good",
   "location": "Crossroads Inn"

@@ -9,9 +9,10 @@
   "money": 44,
   "energy": 81,
   "relationships": {
-    "Alon": 0.69,
+    "Alon": 1,
     "EVE": 1,
-    "Tomas": 1
+    "Tomas": 1,
+    "Trencher": 0.15
   },
   "memories": [
     "Alon gave away our last coin to a beggar. Predictable idealist.",
@@ -58,7 +59,23 @@
     "I ran into Tomas again and this time I held his gaze a moment longer than I should have, feeling that dangerous warmth creeping in and hating myself for it.",
     "I ran into Alon again and caught myself almost smiling before I turned it into a sneer, hating how his warmth made my cynicism feel fragile.",
     "I saw EVE again and this time I couldn't hide how my eyes lingered on her, how some traitorous part of me wanted to see if she'd prove me wrong about people.",
-    "I saw Tomas again and felt that familiar warmth trying to crack through my defenses, so I threw a jab at him to remind myself why I can't afford to let it in."
+    "I saw Tomas again and felt that familiar warmth trying to crack through my defenses, so I threw a jab at him to remind myself why I can't afford to let it in.",
+    "I saw Alon again and forced myself to sneer, but felt that dangerous pull toward him growing stronger, like he was personally threatening everything I'd built my worldview on.",
+    "I saw EVE and let myself wonder for just a moment if someone that self-driven could possibly care about anything beyond their own gain, before I shut it down.",
+    "I saw Tomas again and threw another barb at him, but my hands were shaking and I hated how much I wanted to stay and talk instead of leaving.",
+    "I saw Alon again and felt that familiar rage and hunger war inside me, my sneer sliding on like armor while my hands betrayed me by not wanting to leave.",
+    "I saw EVE again and felt that dangerous softening creep in, so I lashed out instead, my cynicism a shield against something I'm not ready to name.",
+    "I saw Tomas again and my hands stayed steady this time, but my heart wasn't in the barb like it should've been—it felt more like a question than an accusation, and that terrified me.",
+    "I saw Alon again and felt the armor crack just enough to let something dangerous through, so I reached for cruelty like a weapon, but it felt hollow in my mouth.",
+    "I saw EVE again and felt that dangerous softening creep in, so I lashed out instead, my cynicism a shield against something I'm not ready to name.",
+    "I saw Tomas again and this time the barb came out weaker still, almost like I was testing whether he'd stay or prove me right for once.",
+    "I saw Alon again and instead of reaching for cruelty, I found myself asking a question—testing whether his warmth was performance or something real, and hating how much the answer mattered.",
+    "I saw EVE again and this time my shield felt thinner, fraying at the edges where I needed it most, and she probably didn't even notice.",
+    "I saw Tomas for the third time and realized I was no longer waiting for him to disappoint me, but afraid he wouldn't.",
+    "I saw Alon for the fourth time and caught myself searching his face for cracks in the warmth, terrified I might not find any.",
+    "I saw EVE again and despite everything I know about her, despite everything I know about people, I felt that stupid flutter of something that wasn't cynicism.",
+    "I saw Tomas again and felt the ground shift beneath me—he smiled like he was genuinely glad, and I couldn't find a single reason to believe he was lying.",
+    "I ran into Trencher and found myself almost smiling at his shameless greed, wondering if his honesty about his own selfishness was the closest anyone gets to truth."
   ],
   "goal": "Prove that people only ever help themselves",
   "location": "Crossroads Inn"
