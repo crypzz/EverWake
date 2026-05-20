@@ -43,6 +43,17 @@ Respond with ONLY valid JSON, no markdown:
   const block = message.content.find(b => b.type === 'text')
   if (!block || block.type !== 'text') throw new Error('No text in brain response')
 
-  const raw = block.text.trim().replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '')
-  return JSON.parse(raw) as BrainOutput
+  let raw = block.text.trim().replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '')
+
+  // Extract just the JSON object if the model added trailing text
+  const match = raw.match(/\{[\s\S]*\}/)
+  if (match) raw = match[0]!
+
+  try {
+    return JSON.parse(raw) as BrainOutput
+  } catch {
+    // Last resort: strip any text appended after the final closing quote+brace
+    raw = raw.replace(/("[\w]+"\s*:\s*"[^"]*?")\s*[^,}\]"]+(?=[,}\]])/g, '$1')
+    return JSON.parse(raw) as BrainOutput
+  }
 }

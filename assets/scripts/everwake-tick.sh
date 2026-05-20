@@ -3,11 +3,13 @@ set -uo pipefail
 
 CITY="${GC_CITY_PATH:-${GC_CITY:-/Users/kpkp/everwake}}"
 
+# Ensure homebrew binaries are in PATH for controller-spawned processes
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+
 echo "=== everwake tick starting ==="
 
-# Load API key from project .env if not already in the environment
-if [ -z "${ANTHROPIC_API_KEY:-}" ] && [ -f "$CITY/.env" ]; then
-  # shellcheck source=/dev/null
+# Load secrets from project .env if not already in environment
+if [ -f "$CITY/.env" ]; then
   set -a; source "$CITY/.env"; set +a
 fi
 
@@ -46,5 +48,18 @@ gc mail send mayor/ \
   -s "Everwake tick complete" \
   -m "$SUMMARY" \
   --notify 2>/dev/null || true
+
+# Auto-commit and push citizen state to GitHub
+if [ -n "${GITHUB_TOKEN:-}" ]; then
+  cd "$CITY"
+  TICK=$(jq -r '.tick' world/tick.json 2>/dev/null || echo "?")
+  git add citizens/ world/tick.json 2>/dev/null || true
+  if ! git diff --cached --quiet 2>/dev/null; then
+    git commit -m "tick $TICK — auto" \
+      --author="everwake <everwake@gastown.local>" 2>/dev/null || true
+    git push "https://${GITHUB_TOKEN}@github.com/crypzz/EverWake.git" main 2>/dev/null || true
+    echo "=== pushed tick $TICK to github ==="
+  fi
+fi
 
 echo "=== everwake tick done ==="
