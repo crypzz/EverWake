@@ -12,7 +12,7 @@
   "relationships": {
     "EVE": 1,
     "Tomas": 1,
-    "Finn": 0.9500000000000001,
+    "Finn": 1,
     "Alon": 1
   },
   "memories": [
@@ -52,7 +52,11 @@
     "I asked Alon a straight question and meant it, felt like I was finally learning something that actually matters instead of just moving pieces around.",
     "I asked EVE a straight question instead of running my mouth, and for half a second she stopped moving long enough to make me think she might actually answer it.",
     "I stopped myself mid-hustle with Finn and asked something I actually wanted to know the answer to.",
-    "I asked Tomas something real instead of pitching him, and for the first time I'm thinking maybe the edge isn't what I know—it's what I'm actually curious about."
+    "I asked Tomas something real instead of pitching him, and for the first time I'm thinking maybe the edge isn't what I know—it's what I'm actually curious about.",
+    "I asked Alon something real instead of sizing him up, and he's the kind of person who actually thinks about that kind of question.",
+    "I caught myself about to size EVE up and asked her something real instead, and I'm still not sure if that's a tactical move or if I actually meant it.",
+    "I ran into Finn and instead of pitching them on some angle, I caught myself genuinely curious about why they chose the path they did.",
+    "I caught myself about to size up Tomas's operation and asked something honest instead, and he took it serious, which made me take it serious too."
   ],
   "goal": "Find an edge in Gas City — financial, social, informational — before anyone knows I'm looking",
   "location": "Crossroads Inn",

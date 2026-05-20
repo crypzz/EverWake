@@ -5,6 +5,7 @@ import { execSync } from 'child_process'
 import chalk from 'chalk'
 import { interact, type InteractResult } from './interact.ts'
 import { updateCitizenBalances, trencherTrade } from './economy.ts'
+import { generateConversation, type Conversation } from './brain.ts'
 import type { Citizen } from './types.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -28,8 +29,8 @@ function loadTick(): number {
   return 0
 }
 
-function saveTick(n: number) {
-  writeFileSync(tickFile, JSON.stringify({ tick: n }, null, 2))
+function saveTick(n: number, conversations: Conversation[] = []) {
+  writeFileSync(tickFile, JSON.stringify({ tick: n, conversations }, null, 2))
 }
 
 function gcEmit(type: string, message: string, payload?: object) {
@@ -115,6 +116,72 @@ if (bigMoves.length === 0) {
   for (const r of bigMoves) {
     const arrow = r.delta > 0 ? chalk.green(`▲ +${r.delta.toFixed(2)}`) : chalk.red(`▼ ${r.delta.toFixed(2)}`)
     console.log(`  ${chalk.cyan(r.actor.padEnd(6))} → ${chalk.magenta(r.target.padEnd(6))}   ${r.before.toFixed(2)} → ${chalk.white(r.after.toFixed(2))}   ${arrow}`)
+  }
+}
+
+// ─── CONVERSATIONS ───────────────────────────────────────────────────────────
+
+console.log('\n' + chalk.bold('CONVERSATIONS THIS TICK'))
+console.log(chalk.dim('─'.repeat(width)))
+
+// Pick 1-2 pairs: biggest relationship movers first, prefer same location
+const seen = new Set<string>()
+const conversationPairs: Array<{ a: Citizen; b: Citizen; context: string }> = []
+
+const rankedResults = [...results]
+  .filter(r => Math.abs(r.delta) > 0.05)
+  .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))
+
+for (const r of rankedResults) {
+  if (conversationPairs.length >= 2) break
+  const pairKey = [r.actor, r.target].sort().join('|')
+  if (seen.has(pairKey)) continue
+  seen.add(pairKey)
+
+  const a = citizens.find(c => c.name === r.actor)!
+  const b = citizens.find(c => c.name === r.target)!
+  const sameLocation = a.location === b.location
+  const context = r.delta > 0
+    ? `Their relationship just warmed (${r.before.toFixed(2)} → ${r.after.toFixed(2)})${sameLocation ? `, both at ${a.location}` : ''}.`
+    : `Their relationship just cooled (${r.before.toFixed(2)} → ${r.after.toFixed(2)})${sameLocation ? `, both at ${a.location}` : ''}.`
+
+  conversationPairs.push({ a, b, context })
+}
+
+// Fall back to same-location pairs if nothing moved
+if (conversationPairs.length === 0) {
+  for (let i = 0; i < citizens.length && conversationPairs.length < 1; i++) {
+    for (let j = i + 1; j < citizens.length; j++) {
+      if (citizens[i]!.location === citizens[j]!.location) {
+        const pairKey = [citizens[i]!.name, citizens[j]!.name].sort().join('|')
+        if (!seen.has(pairKey)) {
+          seen.add(pairKey)
+          conversationPairs.push({
+            a: citizens[i]!, b: citizens[j]!,
+            context: `Both are at ${citizens[i]!.location}.`
+          })
+          break
+        }
+      }
+    }
+  }
+}
+
+const conversations: Conversation[] = []
+
+for (const { a, b, context } of conversationPairs) {
+  try {
+    const convo = await generateConversation(a, b, context)
+    conversations.push(convo)
+
+    console.log(chalk.bold(`\n  ${chalk.cyan(a.name)} & ${chalk.magenta(b.name)}`) + chalk.dim(` — ${convo.location}`))
+    console.log(chalk.dim('  ' + '─'.repeat(50)))
+    for (const line of convo.lines) {
+      const nameColor = line.speaker === a.name ? chalk.cyan : chalk.magenta
+      console.log(`  ${nameColor(line.speaker.padEnd(10))} ${chalk.white(line.line)}`)
+    }
+  } catch {
+    // best-effort — don't break tick if conversation fails
   }
 }
 
