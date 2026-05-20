@@ -1,5 +1,6 @@
 # Secrets
 .env
+citizen-wallets-private.json
 
 # Node
 node_modules/
