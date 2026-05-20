@@ -11,8 +11,8 @@
   "energy": 91,
   "relationships": {
     "EVE": 1,
-    "Tomas": 0.9500000000000001,
-    "Finn": 0.65,
+    "Tomas": 1,
+    "Finn": 0.8,
     "Alon": 1
   },
   "memories": [
@@ -44,7 +44,11 @@
     "I caught Alon on the street and instead of asking what he sells, I asked what everyone gets wrong about it—watched him light up like I'd finally asked the right question.",
     "I caught EVE in the street and went straight for the gap between what she sells and what she actually knows, watched her clock that I wasn't wasting her time with small talk.",
     "I clocked that Finn moves through Gas City like she's reading it, and I came in too hot with my angle instead of asking what she's already learned.",
-    "I asked Tomas the right question and actually shut up to hear the answer, which felt like it cost me something but maybe that's the edge."
+    "I asked Tomas the right question and actually shut up to hear the answer, which felt like it cost me something but maybe that's the edge.",
+    "I caught Alon in the street and for once asked a real question instead of leading with my pitch, and something about their warmth made me want to know the actual answer.",
+    "I ran into EVE and instead of launching into my angle, I actually asked what was happening with her first, which felt weird and good at the same time.",
+    "I asked Finn straight up what they were hunting for and didn't jump to my pitch, which felt harder than it should have but also like maybe the move.",
+    "I caught myself about to pitch Tomas and asked him a straight question instead, and it felt like the right move for once."
   ],
   "goal": "Find an edge in Gas City — financial, social, informational — before anyone knows I'm looking",
   "location": "Crossroads Inn",
