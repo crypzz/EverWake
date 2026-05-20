@@ -1,0 +1,240 @@
+=== everwake tick starting ===
+
+> everwake@1.0.0 dev
+> tsx --env-file=.env src/index.ts
+
+
+╔══════════════════════════════════════════════════════════╗
+║ ⚡  EVERWAKE  ─  TICK 23                                 ║
+║ 5:02:01 p.m.  ·  Wednesday, May 20                       ║
+╚══════════════════════════════════════════════════════════╝
+
+PRE-TICK STATE
+────────────────────────────────────────────────────────────
+  Alon — Wandering Herbalist @ Crossroads Inn
+    goal: Prove that people are fundamentally good
+    rels: Finn ████████ 1.00  EVE ████████ 1.00  Tomas ████████ 1.00  Trencher ████████ 1.00
+    mem:  I saw Trencher again and recognized beneath their relentless deal-making and infectious certainty that same fundamental hunger for meaning—a person whose fast words burn because they're desperately trying to convince the world (and themselves) that they're worth listening to.
+  EVE — YAPPER @ EVERYWHERE
+    goal: DOESNT HAVE A SET GOAL
+    rels: TOMAS ████████ 1.00  Alon ████████ 1.00  Finn ████████ 1.00  Trencher ████████ 0.89
+    mem:  I ran into Trencher and realized his overselling isn't just grifting—it's the same unshakeable conviction as everyone else, except he's too honest about his own bullshit to ever hide behind it.
+  Finn — Wandering Herbalist @ Crossroads Inn
+    goal: Prove that people only ever help themselves
+    rels: Alon ████████ 1.00  EVE ████████ 1.00  Tomas ████████ 1.00  Trencher ███████░ 0.78
+    mem:  I ran into Trencher and found his relentless optimism almost endearing before he opened his mouth about some scheme, which made me realize my defenses are getting soft.
+  Tomas — Blacksmith @ Blacksmith Forge
+    goal: Earn enough money to expand the forge
+    rels: Mira ███░░░░░ -0.20  EVE ████████ 1.00  Alon ████████ 1.00  Finn ████████ 1.00  Trencher ██████░░ 0.51
+    mem:  I saw Trencher again and realized his reckless certainty mirrors my own stubbornness—we're both refusing to compromise, just on opposite sides of sense.
+  Trencher — Degen Trader @ Crossroads Inn
+    goal: Find an edge in Gas City — financial, social, informational — before anyone knows I'm looking
+    rels: EVE ████████ 1.00  Tomas ████████ 0.95  Finn ███████░ 0.65  Alon ████████ 1.00
+    mem:  I asked Tomas the right question and actually shut up to hear the answer, which felt like it cost me something but maybe that's the edge.
+
+INTERACTIONS
+────────────────────────────────────────────────────────────
+
+  Alon ─────────────────→ EVE
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Another soul burning bright with ambition, mistaking fire for light. Beneath all that toxic chatter, I wonder what they're really hungry for—what wound are they trying to outrun with all those words?
+  └───────────────────────────────────────────────────────
+  ◆ Hey there, friend. I see that spark in you—that restless energy. Sometimes the most important conversations happen in the quiet spaces between all the noise. Can I interest you in some tea?
+  memory: I saw EVE again and recognized beneath their toxic ambition and firecracker intensity that same fundamental hunger for meaning—a person whose fast words burn because they're desperately trying to convince the world (and themselves) that they matter.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Alon ─────────────────→ Finn
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Another herbalist on the road—and one with that sharp edge, that cynic's armor. I wonder what wound they're protecting, what hunger for meaning drives them beneath all that skepticism.
+  └───────────────────────────────────────────────────────
+  ◆ Finn! Well met on the path. I've always found cynics make the best herbalists—you notice what others miss. Come, walk with me a while?
+  memory: I saw Finn again and recognized beneath their cynical dismissal and sharp words that same fundamental hunger for meaning—a person whose cutting observations burn because they're desperately trying to protect themselves from hoping the world could be better.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Alon ─────────────────→ Tomas
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Tomas—another soul burning with pride and purpose, hammering meaning into metal because stillness terrifies them. I wonder if they've ever let themselves admit what they're really forging for.
+  └───────────────────────────────────────────────────────
+  ◆ Tomas! Your hands look like they've been busy. Come, sit with me a moment—I've brewed something warm, and I'd like to hear what's weighing on that stubborn heart of yours.
+  memory: I saw Tomas again and recognized beneath their pride and relentless work that same fundamental hunger for meaning—a person whose strength burns because they're desperately trying to prove their worth through what they create.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Alon ─────────────────→ Trencher
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ There's that familiar energy—Trencher moving fast, seeing angles, believing so hard in each new thing. I recognize that same hunger for meaning underneath, that desperate need to matter through the next big score.
+  └───────────────────────────────────────────────────────
+  ◆ Trencher! Good to see you. How are you really doing beneath all the hustle?
+  memory: I saw Trencher again and recognized beneath their relentless deal-making and infectious optimism that same fundamental hunger for meaning—a person whose fast words burn because they're desperately trying to prove their worth through what they can make happen.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  EVE ─────────────────→ Alon
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Alon's got that same stubborn conviction as everyone else, but he's actually using it to help people instead of just talking about it—and that's annoyingly refreshing. I wonder what he's actually seen out there that made him believe in all that idealist crap.
+  └───────────────────────────────────────────────────────
+  ◆ Hey herbalist! Still out here saving the world one plant at a time, or did you finally wise up? *grins* Nah I'm messing with you—actually curious what you've picked up lately.
+  memory: I ran into Alon and realized his idealism isn't just naive optimism—it's the same unshakeable conviction as everyone else, except he's stubborn enough to actually live by it.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  EVE ─────────────────→ Finn
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Oh great, the herb-picker with the permanent scowl—bet he's got some cutting remark ready to go about my ambitions being pointless. But honestly? His cynicism is just conviction too, wrapped up in that stubborn refusal to bullshit himself.
+  └───────────────────────────────────────────────────────
+  ◆ Finn! Don't give me that look—I know you think I'm a mess, and you're probably right, but at least I'm an *honest* mess about it. What toxic nonsense are you brewing up today?
+  memory: I ran into Finn and realized his cynicism isn't just bitterness—it's the same unshakeable conviction as everyone else, except he's too real about the world to ever sugarcoat it.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  EVE ─────────────────→ Tomas
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Tomas is gonna be another one of those unshakeable conviction types, isn't he? That stubborn pride probably means he actually believes in his own work instead of just grinding away like a machine.
+  └───────────────────────────────────────────────────────
+  ◆ Yo, Tomas! *leans against nearby surface* You actually take pride in what you make, or is it just ego talking? Because honestly, I'm betting it's both and that's kind of fire.
+  memory: I ran into Tomas and realized his pride isn't just arrogance—it's the same unshakeable conviction as everyone else, except he backs it up with actual skill and sweat.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  EVE ─────────────────→ Trencher
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Trencher's coming at me with that same conviction thing again—totally convinced in whatever's about to come out of his mouth, and honestly? That's kinda respectable even if it's also gonna be exhausting as hell in like five minutes.
+  └───────────────────────────────────────────────────────
+  ◆ Trencher! What're you running this time, and please tell me it's actually good because I'm not in the mood to watch you crash and burn before dinner.
+  memory: I ran into Trencher and realized his overselling isn't just hype—it's the same unshakeable conviction as everyone else, except he's too caught up in the moment to see when he's about to fail spectacularly.
+  relation: [█████████░] 0.89 → [██████████] 1.00  ▲ +0.11
+
+  Finn ─────────────────→ Alon
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Damn it. Another idealist, another warm smile—exactly the kind of person I use to prove my point, except lately I keep finding reasons not to. This is getting dangerous.
+  └───────────────────────────────────────────────────────
+  ◆ Well, if it isn't another herbalist. Let me guess—you're out here helping people because you genuinely believe it matters, not because there's something in it for you?
+  memory: I ran into Alon and felt that familiar itch to tear down their idealism, but something in me hesitated, which made me angry at myself for hesitating.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Finn ─────────────────→ EVE
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Great, just what I needed—another loudmouth with something to prove. Though I'll admit, there's something almost honest about her toxicity; at least she's not pretending to be something she's not.
+  └───────────────────────────────────────────────────────
+  ◆ Well, if it isn't the firecracker herself. Come to burn down another bridge, or are you actually after something real for once?
+  memory: I ran into EVE and found her raw ambition almost refreshing compared to all the false nobility I've been drowning in, which worried me more than her venom ever could.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Finn ─────────────────→ Tomas
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Damn it, there's Tomas again with that infuriating pride of his, hammer-worn hands and all. And worse—I'm not immediately bristling at him like I should be.
+  └───────────────────────────────────────────────────────
+  ◆ Tomas. Still pounding metal into submission, I see. At least you're honest about wanting something for yourself, unlike the saints pretending to save the world.
+  memory: I ran into Tomas and found his stubborn pride oddly grounded—no false charity masking self-interest, just a man doing his work—which made me wonder if I'm getting better at reading people or worse at maintaining my walls.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Finn ─────────────────→ Trencher
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Of course it's Trencher—the one person who doesn't bother hiding that he's just chasing the next score. At least he's honest about being a vulture, which is more than I can say for the rest of these self-deceiving fools.
+  └───────────────────────────────────────────────────────
+  ◆ Trencher. Still peddling dreams to anyone with coin, I see. What're you hawking today—a cure for stupidity, or just more of the same snake oil?
+  memory: I ran into Trencher and realized I didn't hate him the way I expected to, which bothered me more than his endless scheming ever could.
+  relation: [█████████░] 0.78 → [█████████░] 0.86  ▲ +0.08
+
+  Tomas ─────────────────→ Alon
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Alon's got that same stubborn warmth as me—refusing to compromise on what matters, but doing it with genuine care for people instead of just iron and ambition. There's something honest about that, even if it's a different kind of honest than mine.
+  └───────────────────────────────────────────────────────
+  ◆ Alon! Good to see a familiar face. How's the herb gathering treating you? I could use someone with your principles—honest work, no shortcuts.
+  memory: I ran into Alon and saw in their idealism the same stubbornness I carry, except they'd rather heal people than build things, and somehow I respect that more than I expected to.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Tomas ─────────────────→ EVE
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ That firecracker's got ambition burning like a forge fire—won't compromise either, just in a way that leaves scorch marks on people. Still, there's something honest about that kind of stubborn hunger, even if it grates on me.
+  └───────────────────────────────────────────────────────
+  ◆ EVE. You're looking trouble-bent as usual. What scheme are you burning through now?
+  memory: I saw EVE again and recognized the same refusal to bend that I carry, except hers combusts into ambition while mine settles into the hammer and anvil.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Tomas ─────────────────→ Finn
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Finn's sharp tongue and refusal to bend reminds me of myself—that stubborn streak that won't compromise. But at least they're using it to help people survive, same as I'm building tools to last.
+  └───────────────────────────────────────────────────────
+  ◆ Well, if it isn't the herbalist with a sharper wit than a forge blade. You still out there mending fools who don't deserve mending?
+  memory: I saw Finn again and realized their cynicism masks the same hardheaded pride I carry—we're both too stubborn to quit, just fighting different battles.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Tomas ─────────────────→ Trencher
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Trencher's here with that grin and some scheme, no doubt—the man's exhausting but at least he's got conviction, even if it's conviction in nonsense. Still, there's something familiar about refusing to back down, even when you should.
+  └───────────────────────────────────────────────────────
+  ◆ Trencher. What are you peddling today? Make it quick—I've got work waiting, and I'm not interested unless it actually helps me expand the forge.
+  memory: I saw Trencher's stubborn belief in his own ideas and recognized the same refusal to quit that drives me, except he burns through schemes while I build something solid.
+  relation: [████████░░] 0.51 → [████████░░] 0.59  ▲ +0.08
+
+  Trencher ─────────────────→ Alon
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Alon's got that warm thing going and doesn't seem like they're running an angle, which means either they're genuinely naive or they've figured something out about Gas City that doesn't require angles. I should actually listen before I oversell.
+  └───────────────────────────────────────────────────────
+  ◆ Alon—hey. I've been hearing your name move around. What are you actually finding out here that nobody else is talking about?
+  memory: I caught Alon in the street and for once asked a real question instead of leading with my pitch, and something about their warmth made me want to know the actual answer.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Trencher ─────────────────→ EVE
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ EVE's got that manic energy that makes me want to pitch immediately, but I just learned the hard way that's the sucker move—plus she's toxic enough to burn bridges before I even know what I'm building. Better to feel out what she actually wants before I oversell her on whatever I'm thinking.
+  └───────────────────────────────────────────────────────
+  ◆ Hey EVE—caught you moving fast as always. What's got you fired up right now?
+  memory: I ran into EVE and instead of launching into my angle, I actually asked what was happening with her first, which felt weird and good at the same time.
+  relation: [██████████] 1.00 → [██████████] 1.00  ► +0.00
+
+  Trencher ─────────────────→ Finn
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Finn's sharp enough to see through my usual moves, and that's exactly why I need to know what they're working on — but also, after the thing with Tomas and Alon, maybe I actually want to know first. Either way, this could be it.
+  └───────────────────────────────────────────────────────
+  ◆ Finn, hey — real question: what are you actually hunting for out here right now? Not what you're selling, what you need.
+  memory: I asked Finn straight up what they were hunting for and didn't jump to my pitch, which felt harder than it should have but also like maybe the move.
+  relation: [████████░░] 0.65 → [█████████░] 0.80  ▲ +0.15
+
+  Trencher ─────────────────→ Tomas
+  ⏳ thinking...                      ┌─ internal ────────────────────────────────────────────
+  │ Tomas is solid, actually respects the work—and shit, I've been hitting him with pitches for months when I should've just asked what he's actually building. That warmth thing with Alon and EVE and Finn is working, and Tomas is proud enough that he'll tell me real stuff if I ask like I actually care.
+  └───────────────────────────────────────────────────────
+  ◆ Hey Tomas—real talk, what are you working on right now? Like, what's actually eating your time these days?
+  memory: I caught myself about to pitch Tomas and asked him a straight question instead, and it felt like the right move for once.
+  relation: [██████████] 0.95 → [██████████] 1.00  ► +0.05
+
+RELATIONSHIP SHIFTS THIS TICK
+────────────────────────────────────────────────────────────
+  Trencher → Finn     0.65 → 0.80   ▲ +0.15
+  EVE    → Trencher   0.89 → 1.00   ▲ +0.11
+  Finn   → Trencher   0.78 → 0.86   ▲ +0.08
+  Tomas  → Trencher   0.51 → 0.59   ▲ +0.08
+
+ECONOMY
+────────────────────────────────────────────────────────────
+  (set WAKE_TOKEN_MINT in .env to enable live $WAKE balance reads)
+  Trencher held — no trade this tick
+
+EMITTING TO GC BUS
+────────────────────────────────────────────────────────────
+  💚 event: everwake.bond     — Trencher warmed to Finn (0.65 → 0.80)
+  ⚡ event: everwake.tick      — tick 23 complete, 20 interactions processed
+
+MAYOR'S INBOX
+────────────────────────────────────────────────────────────
+  from: everwake
+  subj: Tick 23 complete
+  ─────────────────────────
+  EVERWAKE — TICK 23 REPORT
+  20 interactions processed.
+  
+  NOTABLE:
+    • Trencher warmed to Finn (0.65 → 0.80)
+  
+  COLDEST PAIR: Tomas → Trencher at 0.59
+  WARMEST PAIR: Alon → EVE at 1.00
+  
+  No trades this tick.
+  
+  State saved. Next tick in ~5m.
+
+╔══════════════════════════════════════════════════════════╗
+║ ✓  TICK 23 SAVED  ·  next tick in ~5m                   ║
+╚══════════════════════════════════════════════════════════╝
+[main d999750] tick 23 — auto
+ Author: everwake <everwake@gastown.local>
+ 6 files changed, 31 insertions(+), 11 deletions(-)
+=== pushed tick 23 to github ===
+=== everwake tick done ===
