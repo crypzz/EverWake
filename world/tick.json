@@ -1,5 +1,5 @@
 {
-  "tick": 34,
+  "tick": 35,
   "conversations": [
     {
       "participants": [
@@ -11,22 +11,22 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "I saw you helping that merchant with her cart earlier. That was kind."
+          "line": "You gathered those moonflowers yourself? That took real kindness."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "She was blocking the road. I wanted to leave. Don't romanticize it."
+          "line": "Kindness? I needed them. Don't mistake self-interest for virtue."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Maybe. But you could have walked around her instead."
+          "line": "Maybe. But you're still here, sharing a table with me."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Don't start. I just... the wheel was stuck. Would've bothered me."
+          "line": "Practical. Your coin spends same as anyone's. Don't read into it."
         }
       ]
     }
