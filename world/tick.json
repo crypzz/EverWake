@@ -1,5 +1,5 @@
 {
-  "tick": 32,
+  "tick": 33,
   "conversations": [
     {
       "participants": [
@@ -11,22 +11,22 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You helped that traveler with directions earlier. Saw it myself."
+          "line": "That woman at the bar helped the injured traveler without asking for coin."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "They looked lost. Figured they'd owe me later, that's all."
+          "line": "She's positioning herself as trustworthy. Better customers that way, obviously."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Maybe. Or maybe you're kinder than you admit to yourself."
+          "line": "Or maybe kindness matters to her regardless of profit. Did you consider that?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Don't romanticize me, Alon. But... they did seem grateful."
+          "line": "I consider what I see. Though... she didn't mention it to anyone, so."
         }
       ]
     }
