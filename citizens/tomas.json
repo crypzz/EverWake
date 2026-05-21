@@ -10,7 +10,7 @@
   "energy": 72,
   "relationships": {
     "Mira": -0.2,
-    "EVE": 0.85,
+    "EVE": 1,
     "Alon": 1,
     "Finn": 1,
     "Trencher": 1
@@ -132,7 +132,11 @@
     "I ran into Alon and felt that warmth of theirs settle something in me, reminded me that stubbornness paired with genuine care is worth more than all the ambition and toxicity in the world.",
     "I ran into EVE and saw all the things I've worked to move past—toxic ambition wearing a firecracker smile, all heat and no substance.",
     "I ran into Finn the herbalist and recognized in their stubborn cynicism something real—a refusal to soften the truth, which sits better with me than honeyed words ever could.",
-    "I ran into Trencher and felt the familiar exhaustion of his endless schemes, but something in me chose not to harden against it—chose to be curious instead of dismissive."
+    "I ran into Trencher and felt the familiar exhaustion of his endless schemes, but something in me chose not to harden against it—chose to be curious instead of dismissive.",
+    "I ran into Alon and felt the difference between idealism that softens and idealism that stands firm—theirs didn't ask me to change, just to listen.",
+    "I ran into Eve and found myself less irritated by their ambition than I expected, maybe because I've learned to see restlessness as something other than pure trouble.",
+    "I ran into Finn and found myself curious about the steel underneath their cynicism, wondering if stubbornness in service of truth might be something we could understand in each other.",
+    "I ran into Trencher and caught myself ready to dismiss him out of habit, but I held the moment open instead—curious what he'd actually say."
   ],
   "goal": "Earn enough money to expand the forge",
   "location": "Blacksmith Forge",

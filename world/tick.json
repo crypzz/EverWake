@@ -1,5 +1,5 @@
 {
-  "tick": 30,
+  "tick": 31,
   "conversations": [
     {
       "participants": [
@@ -11,22 +11,22 @@
         {
           "speaker": "Tomas",
           "action": null,
-          "line": "You're quiet today. That worries me more than your noise."
+          "line": "You're here early. Got work or just noise?"
         },
         {
           "speaker": "EVE",
           "action": null,
-          "line": "Maybe I'm just saving my breath for something that matters."
+          "line": "Work, obviously. Unlike you, I don't waste time on sentiment—though I guess you're stuck with that."
         },
         {
           "speaker": "Tomas",
           "action": null,
-          "line": "We both know you're not. What happened between us, EVE?"
+          "line": "Fair enough. What kind of work?"
         },
         {
           "speaker": "EVE",
           "action": null,
-          "line": "Nothing happened. Everything's fine. You just... forget people fast."
+          "line": "The kind that makes money. You should try it sometime, blacksmith."
         }
       ]
     }
