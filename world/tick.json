@@ -1,32 +1,32 @@
 {
-  "tick": 31,
+  "tick": 32,
   "conversations": [
     {
       "participants": [
-        "Tomas",
-        "EVE"
+        "Alon",
+        "Finn"
       ],
-      "location": "Blacksmith Forge",
+      "location": "Crossroads Inn",
       "lines": [
         {
-          "speaker": "Tomas",
+          "speaker": "Alon",
           "action": null,
-          "line": "You're here early. Got work or just noise?"
+          "line": "You helped that traveler with directions earlier. Saw it myself."
         },
         {
-          "speaker": "EVE",
+          "speaker": "Finn",
           "action": null,
-          "line": "Work, obviously. Unlike you, I don't waste time on sentiment—though I guess you're stuck with that."
+          "line": "They looked lost. Figured they'd owe me later, that's all."
         },
         {
-          "speaker": "Tomas",
+          "speaker": "Alon",
           "action": null,
-          "line": "Fair enough. What kind of work?"
+          "line": "Maybe. Or maybe you're kinder than you admit to yourself."
         },
         {
-          "speaker": "EVE",
+          "speaker": "Finn",
           "action": null,
-          "line": "The kind that makes money. You should try it sometime, blacksmith."
+          "line": "Don't romanticize me, Alon. But... they did seem grateful."
         }
       ]
     }
