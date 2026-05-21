@@ -1,5 +1,5 @@
 {
-  "tick": 35,
+  "tick": 36,
   "conversations": [
     {
       "participants": [
@@ -11,22 +11,22 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You gathered those moonflowers yourself? That took real kindness."
+          "line": "Did you see that traveler give bread to the beggar outside?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Kindness? I needed them. Don't mistake self-interest for virtue."
+          "line": "Probably wanted to feel better about himself. That's all charity ever is."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Maybe. But you're still here, sharing a table with me."
+          "line": "Or maybe he just saw someone hungry and couldn't ignore it."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Practical. Your coin spends same as anyone's. Don't read into it."
+          "line": "Same thing. But... I suppose it doesn't matter why, does it."
         }
       ]
     }
