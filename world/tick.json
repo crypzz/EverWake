@@ -1,32 +1,32 @@
 {
-  "tick": 29,
+  "tick": 30,
   "conversations": [
     {
       "participants": [
-        "Alon",
-        "Finn"
+        "Tomas",
+        "EVE"
       ],
-      "location": "Crossroads Inn",
+      "location": "Blacksmith Forge",
       "lines": [
         {
-          "speaker": "Alon",
+          "speaker": "Tomas",
           "action": null,
-          "line": "You've been quiet since we arrived. Something on your mind?"
+          "line": "You're quiet today. That worries me more than your noise."
         },
         {
-          "speaker": "Finn",
+          "speaker": "EVE",
           "action": null,
-          "line": "Just watching the innkeeper water down drinks. People never change."
+          "line": "Maybe I'm just saving my breath for something that matters."
         },
         {
-          "speaker": "Alon",
+          "speaker": "Tomas",
           "action": null,
-          "line": "Or maybe he's stretching coin to feed his family. Have you asked?"
+          "line": "We both know you're not. What happened between us, EVE?"
         },
         {
-          "speaker": "Finn",
+          "speaker": "EVE",
           "action": null,
-          "line": "...No. But that's exactly what he'd say regardless."
+          "line": "Nothing happened. Everything's fine. You just... forget people fast."
         }
       ]
     }
