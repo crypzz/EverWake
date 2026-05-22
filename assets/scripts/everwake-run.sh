@@ -47,7 +47,7 @@ gc mail send mayor/ \
 if [ -n "${GITHUB_TOKEN:-}" ]; then
   cd "$CITY"
   TICK=$(jq -r '.tick' world/tick.json 2>/dev/null || echo "?")
-  git add citizens/ world/tick.json 2>/dev/null || true
+  git add citizens/ world/tick.json public/ticks/ src/imagine.ts src/interact.ts src/index.ts 2>/dev/null || true
   if ! git diff --cached --quiet 2>/dev/null; then
     git commit -m "tick $TICK — auto" \
       --author="everwake <everwake@gastown.local>" 2>/dev/null || true

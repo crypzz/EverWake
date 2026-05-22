@@ -1,5 +1,5 @@
 {
-  "tick": 43,
+  "tick": 47,
   "conversations": [
     {
       "participants": [
@@ -11,25 +11,25 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You've been quiet since morning. Care to share what troubles you?"
+          "line": "You look tired, Finn. Did the road treat you poorly?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Nothing troubles me. People help themselves, and I help myself. Simple."
+          "line": "Road treats everyone poorly. Some just pretend it doesn't bother them."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You shared your salve with that child yesterday. For free."
+          "line": "Perhaps. But you stopped to help that merchant yesterday."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Bad business sense. Won't happen again, probably."
+          "line": "Only because he had good elderflower. Don't read charity into it."
         }
       ]
     }
   ],
-  "image": "public/ticks/tick-43.png"
+  "image": "public/ticks/tick-47.png"
 }
