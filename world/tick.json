@@ -1,5 +1,5 @@
 {
-  "tick": 36,
+  "tick": 37,
   "conversations": [
     {
       "participants": [
@@ -11,22 +11,22 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Did you see that traveler give bread to the beggar outside?"
+          "line": "I saw you help that merchant with their cart. You're kinder than you admit."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Probably wanted to feel better about himself. That's all charity ever is."
+          "line": "I helped because his cart blocked my path. Don't romanticize basic logistics, Alon."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Or maybe he just saw someone hungry and couldn't ignore it."
+          "line": "Maybe. But you helped anyway. That counts for something, doesn't it?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Same thing. But... I suppose it doesn't matter why, does it."
+          "line": "It counts for a cleared road. Nothing more. Though... the tea's good here."
         }
       ]
     }
