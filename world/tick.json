@@ -1,5 +1,5 @@
 {
-  "tick": 49,
+  "tick": 50,
   "conversations": [
     {
       "participants": [
@@ -11,25 +11,25 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You look tired, Finn. When's the last time you rested?"
+          "line": "You look tired, Finn. Let me brew you something restorative."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Rest is for people who think tomorrow brings something better. It doesn't."
+          "line": "You mean something that makes me owe you a favor later?"
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Maybe not. But someone here will care if you collapse."
+          "line": "No. Just something kind. No debt required."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Only because they'd need the bed space. Still... I'll eat something."
+          "line": "...Fine. But only because I'm actually exhausted."
         }
       ]
     }
   ],
-  "image": "public/ticks/tick-49.png"
+  "image": "public/ticks/tick-50.png"
 }
