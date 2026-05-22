@@ -9,7 +9,7 @@
   "money": 44,
   "energy": 81,
   "relationships": {
-    "Alon": 1,
+    "Alon": 0.85,
     "EVE": 1,
     "Tomas": 1,
     "Trencher": 1
@@ -167,7 +167,15 @@
     "I ran into Alon and felt that stubborn warmth flare up again, and instead of fighting it this time, I threw up a wall of sarcasm just to prove I could still be the person I thought I was.",
     "I ran into EVE and her toxicity felt honest in a way that made my cynicism almost comfortable again, though that ease itself made me suspicious.",
     "I ran into Tomas and felt that warm thing crack through my defenses again, so I wrapped it in barbs and sarcasm like I always do, hating that he might be one of the few who actually means what he does.",
-    "I ran into Trencher and his shameless enthusiasm almost felt like relief after all that warmth trying to crack my shell."
+    "I ran into Trencher and his shameless enthusiasm almost felt like relief after all that warmth trying to crack my shell.",
+    "I saw Alon again and felt that dangerous pull toward believing in them, so I armed myself with cynicism like it was armor, though part of me wanted to see if they'd prove me wrong.",
+    "I ran into Eve and her toxicity was almost refreshing after all that genuine warmth trying to crack through my defenses; at least she wasn't pretending to be anything other than hungry.",
+    "I ran into Tomas and found his straightforward stubbornness almost... restful, like not having to decode what he wanted from me.",
+    "I ran into Trencher and felt the relief of someone whose greed was at least transparent, uncomplicated by the kind of genuine belief that makes people dangerous.",
+    "I ran into Alon and felt my cynicism crack slightly, which only made me meaner to keep the walls up.",
+    "I ran into EVE and her toxic ambition was so plainly on display that I almost respected the lack of pretense, though I kept my guard up hard because people like that are exactly why I know what I know.",
+    "I ran into Tomas and his stubborn pride reminded me too much of my own walls, which made me sharper than I needed to be, testing whether he'd prove me right or prove me wrong.",
+    "I ran into Trencher and found his shameless self-interest almost tolerable because he didn't bother hiding it like the rest."
   ],
   "goal": "Prove that people only ever help themselves",
   "location": "Crossroads Inn",

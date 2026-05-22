@@ -1,32 +1,32 @@
 {
-  "tick": 39,
+  "tick": 41,
   "conversations": [
     {
       "participants": [
-        "Alon",
-        "Finn"
+        "Finn",
+        "Alon"
       ],
       "location": "Crossroads Inn",
       "lines": [
         {
-          "speaker": "Alon",
-          "action": null,
-          "line": "You gathered those silverleaf sprigs for the sick girl, didn't you?"
-        },
-        {
           "speaker": "Finn",
           "action": null,
-          "line": "Her mother paid well. Don't mistake profit for kindness, idealist."
+          "line": "You're still here. Thought you'd moved on to easier company."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You helped anyway. That's what matters to me, Finn."
+          "line": "I'm here because I want to be. Why does that trouble you?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "One decent act doesn't prove your optimism. But... it was the right thing."
+          "line": "It doesn't. Just means you'll want something eventually, like everyone else."
+        },
+        {
+          "speaker": "Alon",
+          "action": null,
+          "line": "Maybe. But not from you. I want *for* you, Finn. There's a difference."
         }
       ]
     }
