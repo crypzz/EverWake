@@ -1,34 +1,35 @@
 {
-  "tick": 41,
+  "tick": 43,
   "conversations": [
     {
       "participants": [
-        "Finn",
-        "Alon"
+        "Alon",
+        "Finn"
       ],
       "location": "Crossroads Inn",
       "lines": [
         {
-          "speaker": "Finn",
-          "action": null,
-          "line": "You're still here. Thought you'd moved on to easier company."
-        },
-        {
           "speaker": "Alon",
           "action": null,
-          "line": "I'm here because I want to be. Why does that trouble you?"
+          "line": "You've been quiet since morning. Care to share what troubles you?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "It doesn't. Just means you'll want something eventually, like everyone else."
+          "line": "Nothing troubles me. People help themselves, and I help myself. Simple."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Maybe. But not from you. I want *for* you, Finn. There's a difference."
+          "line": "You shared your salve with that child yesterday. For free."
+        },
+        {
+          "speaker": "Finn",
+          "action": null,
+          "line": "Bad business sense. Won't happen again, probably."
         }
       ]
     }
-  ]
+  ],
+  "image": "public/ticks/tick-43.png"
 }
