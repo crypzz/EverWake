@@ -1,5 +1,5 @@
 {
-  "tick": 48,
+  "tick": 49,
   "conversations": [
     {
       "participants": [
@@ -11,25 +11,25 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "That merchant gave you extra tea leaves yesterday. Kindness, not profit."
+          "line": "You look tired, Finn. When's the last time you rested?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "He wanted me gone faster. Don't mistake convenience for virtue."
+          "line": "Rest is for people who think tomorrow brings something better. It doesn't."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Or maybe both things exist in the same person. Ever consider that?"
+          "line": "Maybe not. But someone here will care if you collapse."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "People aren't both things, Alon. They're just better at hiding one."
+          "line": "Only because they'd need the bed space. Still... I'll eat something."
         }
       ]
     }
   ],
-  "image": "public/ticks/tick-48.png"
+  "image": "public/ticks/tick-49.png"
 }
