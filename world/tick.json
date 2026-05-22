@@ -1,5 +1,5 @@
 {
-  "tick": 47,
+  "tick": 48,
   "conversations": [
     {
       "participants": [
@@ -11,25 +11,25 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You look tired, Finn. Did the road treat you poorly?"
+          "line": "That merchant gave you extra tea leaves yesterday. Kindness, not profit."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Road treats everyone poorly. Some just pretend it doesn't bother them."
+          "line": "He wanted me gone faster. Don't mistake convenience for virtue."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Perhaps. But you stopped to help that merchant yesterday."
+          "line": "Or maybe both things exist in the same person. Ever consider that?"
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Only because he had good elderflower. Don't read charity into it."
+          "line": "People aren't both things, Alon. They're just better at hiding one."
         }
       ]
     }
   ],
-  "image": "public/ticks/tick-47.png"
+  "image": "public/ticks/tick-48.png"
 }
