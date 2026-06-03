@@ -1,5 +1,5 @@
 {
-  "tick": 61,
+  "tick": 62,
   "conversations": [
     {
       "participants": [
@@ -11,24 +11,25 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "You helped that merchant carry water yesterday. I saw it."
+          "line": "You helped that traveler with fever last night. You care."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "He looked like he'd pay for it later. Business, not charity."
+          "line": "Helped? I needed their coin for supplies. Don't romanticize necessity."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Maybe. Or maybe you're kinder than you admit to yourself."
+          "line": "Maybe. But they lived because you acted. That matters."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "Don't make me regret the warmth in this place, Alon."
+          "line": "... Yeah. Suppose it does."
         }
       ]
     }
-  ]
+  ],
+  "comic": "public/ticks/comic-62.png"
 }
