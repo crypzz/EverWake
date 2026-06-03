@@ -6,7 +6,7 @@ import chalk from 'chalk'
 import { interact, type InteractResult } from './interact.ts'
 import { updateCitizenBalances, trencherTrade } from './economy.ts'
 import { generateConversation, type Conversation } from './brain.ts'
-import { generateTickImage } from './imagine.ts'
+import { generateTickComic } from './imagine.ts'
 import type { Citizen } from './types.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -219,12 +219,12 @@ saveTick(tick, conversations)
 // ─── IMAGE GENERATION ────────────────────────────────────────────────────────
 
 try {
-  const imagePath = await generateTickImage(tick, conversations)
-  if (imagePath) {
+  const comicPath = await generateTickComic(tick, conversations)
+  if (comicPath) {
     const tickData = JSON.parse(readFileSync(tickFile, 'utf-8')) as object
-    writeFileSync(tickFile, JSON.stringify({ ...tickData, image: imagePath }, null, 2))
+    writeFileSync(tickFile, JSON.stringify({ ...tickData, comic: comicPath }, null, 2))
   }
-} catch { /* best-effort — image failure never breaks the tick */ }
+} catch { /* best-effort — comic failure never breaks the tick */ }
 
 // ─── GC EVENTS ───────────────────────────────────────────────────────────────
 

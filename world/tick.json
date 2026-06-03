@@ -1,5 +1,5 @@
 {
-  "tick": 51,
+  "tick": 61,
   "conversations": [
     {
       "participants": [
@@ -11,25 +11,24 @@
         {
           "speaker": "Alon",
           "action": null,
-          "line": "That merchant gave you extra herbs without asking for payment."
+          "line": "You helped that merchant carry water yesterday. I saw it."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "He wanted to seem charitable. People are transparent when motivated."
+          "line": "He looked like he'd pay for it later. Business, not charity."
         },
         {
           "speaker": "Alon",
           "action": null,
-          "line": "Or maybe he recognized something good in you. Saw it reflected."
+          "line": "Maybe. Or maybe you're kinder than you admit to yourself."
         },
         {
           "speaker": "Finn",
           "action": null,
-          "line": "You're stubborn as stone, Alon. But I'll... consider it."
+          "line": "Don't make me regret the warmth in this place, Alon."
         }
       ]
     }
-  ],
-  "image": "public/ticks/tick-51.png"
+  ]
 }
